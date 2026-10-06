@@ -1,0 +1,116 @@
+/*
+ * THE SINGLE SOURCE OF COLOUR TRUTH.
+ *
+ * check:theme-tokens fails the build if a raw hex/rgb/hsl literal appears in any other
+ * file under apps/web. If you need a new colour, add it here — nowhere else. This is what
+ * stops a codebase drifting into forty slightly different greys.
+ *
+ * The palette is zinc (surfaces and text) plus a single cyan accent, because a gallery of
+ * rendered motion should not compete with the page for attention. The videos own the
+ * colour; the chrome owns the structure.
+ */
+
+:root {
+  /* surfaces */
+  --bg: #fbfbfc;
+  --bg-elevated: #ffffff;
+  --bg-sunken: #f4f4f5;
+
+  /* content */
+  --fg: #18181b;
+  --fg-muted: #52525b;
+  --fg-subtle: #71717a;
+
+  /* lines */
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+
+  /* accent — one hue, used for interactive state and the motion rail */
+  --accent: #0e7490;
+  --accent-hover: #155e75;
+  --accent-fg: #ffffff;
+  --accent-subtle: #ecfeff;
+  --accent-soft: #a5f3fc;
+
+  /* status */
+  --ok: #15803d;
+  --ok-subtle: #f0fdf4;
+  --warn: #b45309;
+  --warn-subtle: #fffbeb;
+  --danger: #b91c1c;
+  --danger-subtle: #fef2f2;
+  --info: #1d4ed8;
+  --info-subtle: #eff6ff;
+
+  /* spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* radii — pill, so the scrub rail and the chips read as one continuous instrument */
+  --radius-1: 4px;
+  --radius-2: 8px;
+  --radius-3: 14px;
+  --radius-4: 999px;
+
+  /* elevation */
+  --shadow-1: 0 1px 2px rgba(24, 24, 27, 0.05);
+  --shadow-2: 0 2px 8px rgba(24, 24, 27, 0.07);
+  --shadow-3: 0 8px 24px rgba(24, 24, 27, 0.1);
+
+  /* type — IBM Plex Sans with IBM Plex Mono for anything measured */
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-md: 0.9375rem;
+  --text-lg: 1.0625rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.5rem;
+  --leading-tight: 1.15;
+  --leading-normal: 1.65;
+
+  /* motion — short and few. The product under review is motion; the chrome must not compete. */
+  --duration-fast: 90ms;
+  --duration-base: 160ms;
+  --ease: cubic-bezier(0.2, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme='dark'] {
+  --bg: #0a0a0b;
+  --bg-elevated: #131316;
+  --bg-sunken: #050507;
+
+  --fg: #fafafa;
+  --fg-muted: #a1a1aa;
+  --fg-subtle: #71717a;
+
+  --border: #26262b;
+  --border-strong: #3f3f46;
+
+  --accent: #22d3ee;
+  --accent-hover: #67e8f9;
+  --accent-fg: #08303a;
+  --accent-subtle: #0b2b33;
+  --accent-soft: #155e75;
+
+  --ok: #4ade80;
+  --ok-subtle: #052e16;
+  --warn: #fbbf24;
+  --warn-subtle: #2a1a02;
+  --danger: #f87171;
+  --danger-subtle: #2a0808;
+  --info: #60a5fa;
+  --info-subtle: #08203f;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-3: 0 8px 24px rgba(0, 0, 0, 0.6);
+}

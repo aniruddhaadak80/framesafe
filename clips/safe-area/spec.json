@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "id": "safe-area",
+  "title": "Safe areas",
+  "summary": "Action-safe and title-safe rectangles arrive as guides and a title is placed inside them, so the constraint is visible in the artefact rather than described in a document.",
+  "technique": ["guides", "broadcast", "layout-constraint"],
+  "tags": ["safe-area", "overscan", "guides"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 6000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.18,
+  "maxAdjacentContrast": 0.6,
+  "reducedMotion": {
+    "holdFrame": 120,
+    "note": "Guides and title are both fully drawn at frame 120."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 5400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "guides",
+      "name": "safe-guides",
+      "t": { "startMs": 300, "inMs": 900, "holdMs": 4200, "outMs": 700, "easing": "easeOutCubic" },
+      "mode": "safe",
+      "stroke": "accentDeep",
+      "strokeWidth": 2,
+      "reveal": "fade"
+    },
+    {
+      "kind": "guides",
+      "name": "thirds",
+      "t": { "startMs": 600, "inMs": 900, "holdMs": 3900, "outMs": 700, "easing": "easeOutCubic" },
+      "mode": "grid",
+      "stroke": "line",
+      "strokeWidth": 1.5,
+      "reveal": "fade"
+    },
+    {
+      "kind": "rect",
+      "name": "title-plate",
+      "t": { "startMs": 1600, "inMs": 700, "holdMs": 3100, "outMs": 700, "easing": "easeOutCubic" },
+      "x": 520,
+      "y": 288,
+      "w": 240,
+      "h": 84,
+      "radius": 8,
+      "fill": "accent",
+      "reveal": "wipeX"
+    },
+    {
+      "kind": "text",
+      "name": "title",
+      "t": { "startMs": 1900, "inMs": 800, "holdMs": 2800, "outMs": 700, "easing": "easeOutCubic" },
+      "text": "SAFE",
+      "x": 640,
+      "y": 296,
+      "scale": 11,
+      "align": "center",
+      "tracking": 2.2,
+      "fill": "ink",
+      "strokeWidth": 4,
+      "reveal": "mask"
+    },
+    {
+      "kind": "text",
+      "name": "action-label",
+      "t": { "startMs": 2600, "inMs": 600, "holdMs": 2100, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "ACTION SAFE 95%",
+      "x": 640,
+      "y": 404,
+      "scale": 7,
+      "align": "center",
+      "tracking": 3,
+      "fill": "muted",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    },
+    {
+      "kind": "text",
+      "name": "title-label",
+      "t": { "startMs": 2900, "inMs": 600, "holdMs": 1800, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "TITLE SAFE 90%",
+      "x": 640,
+      "y": 462,
+      "scale": 7,
+      "align": "center",
+      "tracking": 3,
+      "fill": "subtle",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    },
+    {
+      "kind": "text",
+      "name": "foot",
+      "t": { "startMs": 3300, "inMs": 600, "holdMs": 1400, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "GUIDES SHIP WITH THE CLIP",
+      "x": 640,
+      "y": 596,
+      "scale": 5,
+      "align": "center",
+      "tracking": 3.2,
+      "fill": "subtle",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    }
+  ]
+}

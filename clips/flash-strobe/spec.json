@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "id": "flash-strobe",
+  "title": "Strobe breach (intentional fail)",
+  "summary": "A deliberately unsafe clip: five high-contrast reversals a second. Its continuity and contrast budgets are switched off so the flash audit fails on its own, which is what proves the audit is not decorative.",
+  "technique": ["audit-demo", "strobe", "photosensitivity"],
+  "tags": ["intentional-fail", "flash", "accessibility"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 5000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 1,
+  "maxAdjacentContrast": 1,
+  "reducedMotion": {
+    "holdFrame": 0,
+    "note": "There is no safe hold for a strobe, which is exactly why the audit rejects this clip."
+  },
+  "layers": [
+    {
+      "kind": "strobe",
+      "name": "strobe",
+      "t": { "startMs": 0, "inMs": 4600, "holdMs": 200, "outMs": 0, "easing": "linear" },
+      "periodMs": 180,
+      "dutyCycle": 0.5,
+      "fill": "paper",
+      "stroke": "ink",
+      "fade": false,
+      "reveal": "flash"
+    },
+    {
+      "kind": "text",
+      "name": "label",
+      "t": { "startMs": 0, "inMs": 4600, "holdMs": 200, "outMs": 0, "easing": "linear" },
+      "text": "THIS CLIP FAILS",
+      "x": 640,
+      "y": 268,
+      "scale": 9,
+      "align": "center",
+      "tracking": 2.6,
+      "fill": "alert",
+      "strokeWidth": 4,
+      "reveal": "hold"
+    },
+    {
+      "kind": "text",
+      "name": "reason",
+      "t": { "startMs": 0, "inMs": 4600, "holdMs": 200, "outMs": 0, "easing": "linear" },
+      "text": "MORE THAN 3 FLASHES PER SECOND",
+      "x": 640,
+      "y": 392,
+      "scale": 5,
+      "align": "center",
+      "tracking": 2.4,
+      "fill": "alert",
+      "strokeWidth": 3,
+      "reveal": "hold"
+    },
+    {
+      "kind": "text",
+      "name": "foot",
+      "t": { "startMs": 0, "inMs": 4600, "holdMs": 200, "outMs": 0, "easing": "linear" },
+      "text": "SHIPPED AS A NEGATIVE TEST",
+      "x": 640,
+      "y": 460,
+      "scale": 5.5,
+      "align": "center",
+      "tracking": 3,
+      "fill": "alert",
+      "strokeWidth": 2,
+      "reveal": "hold"
+    }
+  ]
+}

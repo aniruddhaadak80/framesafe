@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "id": "type-cascade",
+  "title": "Type cascade",
+  "summary": "Four lines enter on their own windows, so the eye is led down the block instead of being handed four lines at once.",
+  "technique": ["kinetic-type", "cascade", "stagger"],
+  "tags": ["type", "cascade", "rhythm"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 6000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.17,
+  "maxAdjacentContrast": 0.6,
+  "reducedMotion": {
+    "holdFrame": 118,
+    "note": "All four lines have landed by frame 118, so the hold frame is the finished block."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 5400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "guides",
+      "name": "thirds",
+      "t": { "startMs": 200, "inMs": 600, "holdMs": 4200, "outMs": 700, "easing": "easeOutCubic" },
+      "mode": "grid",
+      "stroke": "line",
+      "strokeWidth": 1.5,
+      "reveal": "fade"
+    },
+    {
+      "kind": "rect",
+      "name": "rule",
+      "t": { "startMs": 400, "inMs": 700, "holdMs": 4300, "outMs": 700, "easing": "easeOutCubic" },
+      "x": 200,
+      "y": 158,
+      "w": 64,
+      "h": 4,
+      "fill": "accent",
+      "reveal": "wipeX"
+    },
+    {
+      "kind": "text",
+      "name": "line-1",
+      "t": { "startMs": 500, "inMs": 700, "holdMs": 4200, "outMs": 700, "easing": "easeOutCubic" },
+      "text": "A CLIP IS A",
+      "x": 200,
+      "y": 196,
+      "scale": 9,
+      "tracking": 2.2,
+      "fill": "paper",
+      "strokeWidth": 3,
+      "reveal": "mask"
+    },
+    {
+      "kind": "text",
+      "name": "line-2",
+      "t": { "startMs": 1000, "inMs": 700, "holdMs": 3700, "outMs": 700, "easing": "easeOutCubic" },
+      "text": "LIST OF TIMINGS",
+      "x": 200,
+      "y": 292,
+      "scale": 9,
+      "tracking": 2.2,
+      "fill": "paper",
+      "strokeWidth": 3,
+      "reveal": "mask"
+    },
+    {
+      "kind": "text",
+      "name": "line-3",
+      "t": { "startMs": 1500, "inMs": 700, "holdMs": 3200, "outMs": 700, "easing": "easeOutCubic" },
+      "text": "NOT A VIDEO",
+      "x": 200,
+      "y": 388,
+      "scale": 9,
+      "tracking": 2.2,
+      "fill": "accent",
+      "strokeWidth": 3,
+      "reveal": "mask"
+    },
+    {
+      "kind": "text",
+      "name": "line-4",
+      "t": { "startMs": 2000, "inMs": 700, "holdMs": 2700, "outMs": 700, "easing": "easeOutCubic" },
+      "text": "UNTIL YOU RENDER",
+      "x": 200,
+      "y": 484,
+      "scale": 9,
+      "tracking": 2.2,
+      "fill": "subtle",
+      "strokeWidth": 3,
+      "reveal": "mask"
+    },
+    {
+      "kind": "text",
+      "name": "foot",
+      "t": { "startMs": 2600, "inMs": 700, "holdMs": 2100, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "FOUR LAYERS, FOUR WINDOWS",
+      "x": 200,
+      "y": 590,
+      "scale": 5,
+      "tracking": 3,
+      "fill": "subtle",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    }
+  ]
+}

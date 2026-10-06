@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "id": "title-block",
+  "title": "Kinetic stroke type",
+  "summary": "Constructed stroke lettering draws itself on glyph by glyph, with the rule beneath it revealed by arc length rather than by a wipe mask.",
+  "technique": ["kinetic-type", "stroke-draw", "stagger"],
+  "tags": ["type", "draw-on", "stagger"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 6000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.16,
+  "maxAdjacentContrast": 0.6,
+  "reducedMotion": {
+    "holdFrame": 96,
+    "note": "The title and rule are already on screen and fully drawn at frame 96, so a reduced-motion viewer sees the finished card."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 5400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "guides",
+      "name": "thirds",
+      "t": { "startMs": 200, "inMs": 700, "holdMs": 4000, "outMs": 700, "easing": "easeOutCubic" },
+      "mode": "grid",
+      "stroke": "line",
+      "strokeWidth": 1.5,
+      "reveal": "fade"
+    },
+    {
+      "kind": "text",
+      "name": "wordmark",
+      "t": { "startMs": 500, "inMs": 1700, "holdMs": 3100, "outMs": 600, "easing": "easeInOutCubic" },
+      "text": "FRAMESAFE",
+      "x": 640,
+      "y": 250,
+      "scale": 17,
+      "align": "center",
+      "tracking": 1.8,
+      "stagger": 0.09,
+      "stroke": "accent",
+      "strokeWidth": 4,
+      "reveal": "draw"
+    },
+    {
+      "kind": "line",
+      "name": "rule",
+      "t": { "startMs": 900, "inMs": 1100, "holdMs": 3700, "outMs": 500, "easing": "easeOutCubic" },
+      "x1": 420,
+      "y1": 424,
+      "x2": 860,
+      "y2": 424,
+      "stroke": "line",
+      "strokeWidth": 3,
+      "reveal": "draw"
+    },
+    {
+      "kind": "text",
+      "name": "tagline",
+      "t": { "startMs": 2000, "inMs": 1000, "holdMs": 2800, "outMs": 600, "easing": "easeOutQuad" },
+      "text": "MOTION, PROVEN",
+      "x": 640,
+      "y": 462,
+      "scale": 9,
+      "align": "center",
+      "tracking": 2.6,
+      "stagger": 0.06,
+      "fill": "muted",
+      "strokeWidth": 3,
+      "reveal": "mask"
+    },
+    {
+      "kind": "rings",
+      "name": "pulse",
+      "t": { "startMs": 600, "inMs": 2200, "holdMs": 2600, "outMs": 800, "easing": "easeOutQuart" },
+      "cx": 640,
+      "cy": 310,
+      "count": 3,
+      "fromR": 150,
+      "toR": 330,
+      "sweepDeg": 200,
+      "spin": 120,
+      "stroke": "accentDeep",
+      "strokeWidth": 2,
+      "reveal": "expand"
+    }
+  ]
+}

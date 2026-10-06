@@ -1,0 +1,576 @@
+{
+  "schema": 1,
+  "id": "continuity-breach",
+  "title": "Continuity breach (intentional fail)",
+  "summary": "A hard cut between two layouts, published with a declared continuity budget the clip does not meet. Its flash budget is wide open so only the continuity audit fails.",
+  "technique": ["audit-demo", "hard-cut", "continuity"],
+  "tags": ["intentional-fail", "continuity", "transition"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 5000,
+  "frameCount": 120,
+  "specDigest": "sha256:ef743179673096e42d554bd0e866691c5d08ae55857e7fee6b6b64bc1579cd6a",
+  "rootDigest": "sha256:6a02ef63ce1e8360214b7b05c9ef319f27030db2d19571150766e1633a7c4a61",
+  "continuityBudget": 0.05,
+  "maxAdjacentContrast": 1,
+  "reducedMotion": {
+    "holdFrame": 30,
+    "note": "Frame 30 is the last frame before the cut, so the reduced-motion hold shows the state a viewer never gets to see the second half of."
+  },
+  "renderer": {
+    "pillow": "12.3.0",
+    "numpy": "2.5.3",
+    "digestRecipe": "framesafe/frame-digest/1",
+    "analysisGrid": "64x36"
+  },
+  "frames": [
+    {
+      "i": 0,
+      "digest": "sha256:c6551465acc0900554cddabbe113cc8db933b1d6b197ba8a99f2fa688af12756"
+    },
+    {
+      "i": 1,
+      "digest": "sha256:bd928a122b4e9a88bccb0afdcb580bd7f79e47457c8605f8b2622173f714d613"
+    },
+    {
+      "i": 2,
+      "digest": "sha256:d739f73d836b29e80b67021df51cf5737bca8021f07827bc4644836d9b3a712d"
+    },
+    {
+      "i": 3,
+      "digest": "sha256:3152a46057877323c07e3c351deb550747ad97da78d75fdb2dd073e0cbca1868"
+    },
+    {
+      "i": 4,
+      "digest": "sha256:d74332f59b8e1e36b7b083d96b3423b4e6979a5fce2810bbda0259e7d5135b30"
+    },
+    {
+      "i": 5,
+      "digest": "sha256:f7964a1d29c388733b484d06e409208cdf2d2fc6e97ae1ca29e5d0583d510b43"
+    },
+    {
+      "i": 6,
+      "digest": "sha256:a377f72e5747599bbfd0a7ccb6dbfab02f35c13e8580b5ab34751d832f2fbdf2"
+    },
+    {
+      "i": 7,
+      "digest": "sha256:2c2e3e893b867d115104743e52ddba634a96a8c4e130f001d0f5b790822ed2e8"
+    },
+    {
+      "i": 8,
+      "digest": "sha256:2deb532af30987502501bf94915f6064a47f257701b1dcb5b568bf60b4594af4"
+    },
+    {
+      "i": 9,
+      "digest": "sha256:0b478043d26159cc47acc367478b994e2541cf7c85dd6b21864d133a415eb42c"
+    },
+    {
+      "i": 10,
+      "digest": "sha256:8cc7373366e80f386a2cec0ade0fe3ba844c2db368721e463da76b4f534e76b4"
+    },
+    {
+      "i": 11,
+      "digest": "sha256:36efbac057bb9c20ddc7c8c5aef7a57bfca04b2e8246d352d61a3b348c506b82"
+    },
+    {
+      "i": 12,
+      "digest": "sha256:1fe6b5d3e2d46adb12da8d1a72346bb0d6c7ebedca8c1c18e164374b79b49fd8"
+    },
+    {
+      "i": 13,
+      "digest": "sha256:d183896dfc080dc3961bd6d27690932d4879bfda283c54050cf3eed0d3409a06"
+    },
+    {
+      "i": 14,
+      "digest": "sha256:6debeebb022fb7125ddd6314b74f4e6280559cc84305f30f86c34a33d3d1eac0"
+    },
+    {
+      "i": 15,
+      "digest": "sha256:014f4069668155a743b2eaf279707be8de20d29f7ef1fd9ebc88de3daa6b8ee3"
+    },
+    {
+      "i": 16,
+      "digest": "sha256:055825e5de19e26f6508bc01dc6075c52c05a66270026c8b42431c24e4d18ccf"
+    },
+    {
+      "i": 17,
+      "digest": "sha256:df8be7bff791e9f6275e53365e353185bff84aa209171dc5d5cbd7093558217c"
+    },
+    {
+      "i": 18,
+      "digest": "sha256:0acd11d5e1070f0231fa434b8e7f63fbf0b0e0b31c3ee56defdc39bf6063976a"
+    },
+    {
+      "i": 19,
+      "digest": "sha256:775f7480a8aa5088ee3a99782864e3e8bcbac9f8c8d2b981c7febb70aa8b1d96"
+    },
+    {
+      "i": 20,
+      "digest": "sha256:24e4f0cf5d499eda113687ecc5f2fca5585f305aa3cef56e23cd06c46fcd4fed"
+    },
+    {
+      "i": 21,
+      "digest": "sha256:45cb5b676b6e9bc7113dec590fe1a64bf6a838ef9e8c7d5e8a4ff60b7751a4d3"
+    },
+    {
+      "i": 22,
+      "digest": "sha256:92d4c7dd9e91fa03643fbc35fd710cae010f235f18e9771b516bce4438d892ae"
+    },
+    {
+      "i": 23,
+      "digest": "sha256:a989ed37952f548d5f1848965e87afb4fc7e5c588d6eeda250890ed6c78d3757"
+    },
+    {
+      "i": 24,
+      "digest": "sha256:621f4efe4c31f5e5ebe9d599d4817ba1c14f3525d21b9565fa34ba9c3eeab631"
+    },
+    {
+      "i": 25,
+      "digest": "sha256:5136e53e0446839ebd7eda2d9f2ff7379f4d7c3c643118adbcb7870afe442927"
+    },
+    {
+      "i": 26,
+      "digest": "sha256:19e5a4e84d639961027678e2d19892112aea77c9a7e9a8c8293ab1ea5c39bfae"
+    },
+    {
+      "i": 27,
+      "digest": "sha256:8b6eada1361db441defb9cfa41877e46a9290760058aa9f56373c756f0423f9f"
+    },
+    {
+      "i": 28,
+      "digest": "sha256:93b75cbc29a35f0b2df39441afebd2b93ae8544a6cf336a82d84da3349722db9"
+    },
+    {
+      "i": 29,
+      "digest": "sha256:d23986916cb342ef8534084e26216c3f342f89ada7a41d69b07857306f01868c"
+    },
+    {
+      "i": 30,
+      "digest": "sha256:5e7db3f15c29c7ec6aed843352c37ec8177b0cbb966aed13e777be5bde738714"
+    },
+    {
+      "i": 31,
+      "digest": "sha256:e263da31f5b0ccf964f9bcdc5ea33cdb49221e1f41750944192c83bba3fd950d"
+    },
+    {
+      "i": 32,
+      "digest": "sha256:4ff988e60ea37a0aa21b62b585200a595ce3eacbc1a5a9f25adf508b9ccf845d"
+    },
+    {
+      "i": 33,
+      "digest": "sha256:67763433a2169a03fcc11b946bdf28ca845ba91cd10b4d58788e27682bf7e1c9"
+    },
+    {
+      "i": 34,
+      "digest": "sha256:d29c014d9965c024487a2d32177e850422d1d43e4258f63a4e2f48217c8c9b5c"
+    },
+    {
+      "i": 35,
+      "digest": "sha256:da8073b9556710798dfd6b6b5b3f38e7fb3968cd6e4dfd7cefce8dd24b0fa3e4"
+    },
+    {
+      "i": 36,
+      "digest": "sha256:fa24018a9cfe61b6aa70f21a9ace414ff807d1dbee0cf0b48d97d918c16e639a"
+    },
+    {
+      "i": 37,
+      "digest": "sha256:921a9f260e4fa70aa2c624af63664ed6c0babc0e52bfd05dfdba1148723bcb6c"
+    },
+    {
+      "i": 38,
+      "digest": "sha256:9858176dcecd9f35c8544a631eb3898e88fa8aaef16393c75f5c7988b57739af"
+    },
+    {
+      "i": 39,
+      "digest": "sha256:794c2400507416043c30e13ae51b1fe5969ac35e307ff929039a48fdd65afe0c"
+    },
+    {
+      "i": 40,
+      "digest": "sha256:151d5e4753c752e4d856afe9f1a811f15741a9603a4627bd26062fa81622ad30"
+    },
+    {
+      "i": 41,
+      "digest": "sha256:d1cd377e32a7b1987496efc6891b6c7bd26ec30853bcb5642fa977ccadac1c26"
+    },
+    {
+      "i": 42,
+      "digest": "sha256:441cc39baf11c076de59c6edf0342ee20af1342913f07cacb78f14388a2856a6"
+    },
+    {
+      "i": 43,
+      "digest": "sha256:648af1b225faf90db78817405fce2e9479e973bfd0b7f62a08d6d0856e79031f"
+    },
+    {
+      "i": 44,
+      "digest": "sha256:48cc297d267b238b4b29e5b2ec1cf6acf07df330e5c4feaf0bab306be77daf4e"
+    },
+    {
+      "i": 45,
+      "digest": "sha256:50c535f8566d3e17cf7119511206adadd0ff6bd7839b2d728edbba6cd97b24b5"
+    },
+    {
+      "i": 46,
+      "digest": "sha256:5d3f09759d55b0ceffc3f49835f4f176323756cd3646c0c770682443486a2bff"
+    },
+    {
+      "i": 47,
+      "digest": "sha256:21e6d3aa111f28200a0ec877ec4a806e50d4d2029fd236b89a6e9d5ad98f7c40"
+    },
+    {
+      "i": 48,
+      "digest": "sha256:d2c4bf3fa2c0793d40797e31ef93b14b300b0a0dd521d74db6b273e62b2c24cc"
+    },
+    {
+      "i": 49,
+      "digest": "sha256:9e7145c91883108058e4382004860ea5339e5647b186211a69b3904c7e97e5fb"
+    },
+    {
+      "i": 50,
+      "digest": "sha256:e0fc9a94a71322983e0b00fd0b462624417981023bd7225e108083ee74393022"
+    },
+    {
+      "i": 51,
+      "digest": "sha256:ac50df79829de1dec3967eaad8325bda2294112aa8dfe134e23d17164f6911b8"
+    },
+    {
+      "i": 52,
+      "digest": "sha256:d5490d85ba670902c05a4d0ac90e9127b471742dad30dedd586a9d5bd010faec"
+    },
+    {
+      "i": 53,
+      "digest": "sha256:7b39f6a99c3992a29188dfbb4d48e4305243b5b0bdb6dfbc1f5976b140a4dc65"
+    },
+    {
+      "i": 54,
+      "digest": "sha256:036cafab458fd3db4dff5b950d1cdb21925a12a341e184cf5d8bb43ba0d76753"
+    },
+    {
+      "i": 55,
+      "digest": "sha256:23aaf94f9244627535484c840f231866aa6ee10c2ae0b6d5ad1ece67d5d87cbc"
+    },
+    {
+      "i": 56,
+      "digest": "sha256:43219c673115ef62d3bd64ae1ae0e9913aaebff5b6dd103ebaee02f14b19c7b4"
+    },
+    {
+      "i": 57,
+      "digest": "sha256:1ec20a11c8896f9dc63328e637b520735ba9c0c11e3c53b7f2e70b835540abad"
+    },
+    {
+      "i": 58,
+      "digest": "sha256:15b20a31656073a69b475d0b9d4a03ea10769c5bf0679414301f8c30d7676745"
+    },
+    {
+      "i": 59,
+      "digest": "sha256:3eb6d74413371a4e2b6ba4ce6cb94e39082e192d0d6b292f4b75c4526ade7ee4"
+    },
+    {
+      "i": 60,
+      "digest": "sha256:c20343cc6ddde07e2e550822a61b528b4eba6856ed757ab48689b0bb025be6b4"
+    },
+    {
+      "i": 61,
+      "digest": "sha256:fc1fc324b808322ab8dafd6e0ee8b435fe2ae516cd756ad2fbc2801e3b968645"
+    },
+    {
+      "i": 62,
+      "digest": "sha256:20e1ee0c8d40469882499d7be58812e8db0eab59ba3d62bb4e9248b60e2f01ca"
+    },
+    {
+      "i": 63,
+      "digest": "sha256:16e1e6269b019efc8ff6175ed656722481593b7f6050eccf82c2e29d9ee506d4"
+    },
+    {
+      "i": 64,
+      "digest": "sha256:52d7adf1b6860df4f82db5788f9bf83f3972afd684d90f8acc2b179bdc33ee2c"
+    },
+    {
+      "i": 65,
+      "digest": "sha256:f958814d344ebcbb90ef4f3af48b0fe2e7fa28cedac61bd026ff615c202c542e"
+    },
+    {
+      "i": 66,
+      "digest": "sha256:244bf7bd3400c3ab1998336796427e2a3669859e168233d324c81f2580726c33"
+    },
+    {
+      "i": 67,
+      "digest": "sha256:a144ca7c4f46c959d1676ddb3b3d54e92b071fa013ced78e43a37c4fc49d0dc9"
+    },
+    {
+      "i": 68,
+      "digest": "sha256:5257efb9881e69470ceab9c50cc9c382d5698b36cd2786a437c377b62796a462"
+    },
+    {
+      "i": 69,
+      "digest": "sha256:b46a3f81280913d36e099668938a9bb566b78094e7f8dd66d639fae6f3ccf9cf"
+    },
+    {
+      "i": 70,
+      "digest": "sha256:0ef9b71c0825040d18ab83865d641a47ae67e1289894032776172bda39641133"
+    },
+    {
+      "i": 71,
+      "digest": "sha256:5687f99046762a59dcf6b08d0bb49e36a559c9c857c3fd6cff0e8375a9f8bcd8"
+    },
+    {
+      "i": 72,
+      "digest": "sha256:4a6a74099f9506714d4a62581892f7deb0c823a5099b28ba7f1aacb538f0a2ad"
+    },
+    {
+      "i": 73,
+      "digest": "sha256:55a46a31187e3b510f7de614329c72773bc582297e6ccfc1480349c3ef7fb769"
+    },
+    {
+      "i": 74,
+      "digest": "sha256:1894cd1d1a1d7a74e94ffb2b6ea7719771894cbefb0ee9d569682832a451add5"
+    },
+    {
+      "i": 75,
+      "digest": "sha256:671913b5ea694c1a44a4fd1985cb1d1b0c226c7b292454a8451b6a21ce112ac0"
+    },
+    {
+      "i": 76,
+      "digest": "sha256:a03c224073ab64c7b58b4e06cf169c2004ccef278455528145a1795fdeb0f65e"
+    },
+    {
+      "i": 77,
+      "digest": "sha256:16d963f0254128158ec4a0f62aea45c6ddea6eef2b8d382c4ecc0b63efc44e12"
+    },
+    {
+      "i": 78,
+      "digest": "sha256:0d72330402281790cc866cd197a512ba35bc40a949361cdd7157a6ae6490597f"
+    },
+    {
+      "i": 79,
+      "digest": "sha256:ec96e3bf280fe7156af96e52f57a6d1137bbed4796afe395b55f9db1672ececf"
+    },
+    {
+      "i": 80,
+      "digest": "sha256:12a047263ae14aca78caa1ff2509ccdf6dac663f139125d8bfc110803a7c35d2"
+    },
+    {
+      "i": 81,
+      "digest": "sha256:6dbec4eb98d25aab032d45d898b05793e7827d7a84b1a1870d3d3bc9de6e90cf"
+    },
+    {
+      "i": 82,
+      "digest": "sha256:cc26fa2c592faae7427b1c1d608d69e7a7840fb5871d36119a8bdd64c52c61c3"
+    },
+    {
+      "i": 83,
+      "digest": "sha256:6a575a3485597b86ad20e58cd549d639ac385606e8771e351dcaef191697c7de"
+    },
+    {
+      "i": 84,
+      "digest": "sha256:ca1215c1716eb7ec639f26513d6b3a969af522ce1aaef5c4281e4b1d29c85680"
+    },
+    {
+      "i": 85,
+      "digest": "sha256:fc138c02171ff66a6d0e069669ccc53e990bf1dbc5c5547ee57a9e8ddc5e0a5c"
+    },
+    {
+      "i": 86,
+      "digest": "sha256:cb31d3ea09fd19fdff01c90085c2a61b6aa9208052b6eec3b1d7a2e812612232"
+    },
+    {
+      "i": 87,
+      "digest": "sha256:d15b1c08a987b9e653c46e9bb6bf8731b84fe0dacd7243bd839c48dd010cac5e"
+    },
+    {
+      "i": 88,
+      "digest": "sha256:a4cbe9b2bac7274bd341dabab0e182b43da86ad0e63a161176d9ee5a933598ca"
+    },
+    {
+      "i": 89,
+      "digest": "sha256:153effd59cea6ae3a4b51c0c3dad663e71cb1fd50509571da38376e1a27a1cd5"
+    },
+    {
+      "i": 90,
+      "digest": "sha256:0a6238065ed95e877d3597df775d9ca34f6baa804c9a37fa7850b8169c92dfac"
+    },
+    {
+      "i": 91,
+      "digest": "sha256:035d517e2c37fcb92fe0d5e78ad9ab7ab088834d820e67d1cc3c11baaa5a425d"
+    },
+    {
+      "i": 92,
+      "digest": "sha256:d8ed29d8b0d49be38618796e8c130e76e3a3e6a4586c8bf1849cc7b9fab01ecd"
+    },
+    {
+      "i": 93,
+      "digest": "sha256:d79c17924b803842d4d6ad05f2a9bcfa4ee0573e4d0d63fbcf9d9325db734ca5"
+    },
+    {
+      "i": 94,
+      "digest": "sha256:b6e87da04f0a37451bc79649695eb5ec40c566bcbdc41cf72bdf059e5d764ee6"
+    },
+    {
+      "i": 95,
+      "digest": "sha256:196e7448af42c36a1ebc899e3b5c17e32ba85c9f9cbc465c3bdf2d9b22590dc8"
+    },
+    {
+      "i": 96,
+      "digest": "sha256:f7895a49f668dc490a84b6989ee9e26d041bbfff00ae09227c2bb1657da0e817"
+    },
+    {
+      "i": 97,
+      "digest": "sha256:cf3328e88e31e3bab72f658f185f91262742b8a178dc281ed10180835d48d5d3"
+    },
+    {
+      "i": 98,
+      "digest": "sha256:e565e9f473874d0dbcacabb46f2e74f5c6c5a4beb598e46fc2581b61834b824f"
+    },
+    {
+      "i": 99,
+      "digest": "sha256:89b5a483a1b58205a4990ca6a60f7867198b973e61214cc8f0302dd073dec5f2"
+    },
+    {
+      "i": 100,
+      "digest": "sha256:527b5d1e8944efcf3594adb4a5ff85cdbeed116c31bd65573f5ff6a3c8c14265"
+    },
+    {
+      "i": 101,
+      "digest": "sha256:651123332401444c84e5e7ecb86c68a93a3334cedf653d10c9b9deff8eb358be"
+    },
+    {
+      "i": 102,
+      "digest": "sha256:4a2a89029b656499393a0a7760c817b4ec5ac14358eb662fbaab28ce6fc63905"
+    },
+    {
+      "i": 103,
+      "digest": "sha256:bd9bc70d1ee85518304d4058e0e75510ca4dfe1103208137223b012e0691576f"
+    },
+    {
+      "i": 104,
+      "digest": "sha256:92893fe752fa7075aec38ea26d89b02e9576292ae25446f08d86f37ec2c76662"
+    },
+    {
+      "i": 105,
+      "digest": "sha256:83185b5819eeb88b163fde48e6ea5534966653e5837b49d730436cb6b12c0f45"
+    },
+    {
+      "i": 106,
+      "digest": "sha256:1c784deee87244daa9eb318a2c5cc78d420bf24e785ec8fe51f5c3d940359c52"
+    },
+    {
+      "i": 107,
+      "digest": "sha256:9a0b854a43ebd6b3ee3d12193901700cc07c5ea458346e495a87f9cab5bdd42b"
+    },
+    {
+      "i": 108,
+      "digest": "sha256:55055fd195fc6cb7038c83e3039ad00b5a8bd6cbd19c245647d6e55035e71d5b"
+    },
+    {
+      "i": 109,
+      "digest": "sha256:3e0c5fc65772f759fe3e5f003e8c4f1f5510a3f2a95c1e7a6b5f6b934de0c17e"
+    },
+    {
+      "i": 110,
+      "digest": "sha256:0f147cda600d6aa081a0ca2abbf044eb91b891cb2d7a8f45df105e017af8acc2"
+    },
+    {
+      "i": 111,
+      "digest": "sha256:27e158413c1f9325479ad63a647d7aee64f3fe22b05986dbef17b0ad75413031"
+    },
+    {
+      "i": 112,
+      "digest": "sha256:ebd36c2e62193581751819ff2e72ee4ad275f05773e7fde6b9f3f0de5d830064"
+    },
+    {
+      "i": 113,
+      "digest": "sha256:b74fdc361878f41eb718a17258da4867bbac195ec7701405513312b9fb271752"
+    },
+    {
+      "i": 114,
+      "digest": "sha256:3c40b812c2a7088a0dab2f68906f98ccf202eddcdc8e9e3eb8d79decf6c3beb2"
+    },
+    {
+      "i": 115,
+      "digest": "sha256:3fdfcb37e4ddecd05d76fa73f7349807b15898aeeb39b09caefa829742be76eb"
+    },
+    {
+      "i": 116,
+      "digest": "sha256:58f6f2db4231141e40ec828c91e5d8ac6f20c2f06ac5db5ebad41c20cf32c273"
+    },
+    {
+      "i": 117,
+      "digest": "sha256:6ac87e5d0c3a1f92679c1cf43d8955560fd7b22f0f98a4a78bad2eb0adb1c74e"
+    },
+    {
+      "i": 118,
+      "digest": "sha256:edb4c8d3fcc996abc05666fba54f48fa251c76dd63feed8fc41a74a491717114"
+    },
+    {
+      "i": 119,
+      "digest": "sha256:7a73e4e4089307b7e3cc5c264d04ba26ec69a7358210b5120ee2f32443ead746"
+    }
+  ],
+  "telemetry": {
+    "luma": [
+      4, 4, 5, 6, 7, 8, 10, 10, 10, 10, 11, 12, 14, 15, 16, 16, 16, 16, 16, 16, 15, 15, 15, 15, 15, 15, 15,
+      15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15,
+      15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 122, 122, 122, 121, 121, 120, 120, 120, 120, 120, 120, 120, 120,
+      120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120,
+      120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 119, 118, 116, 4, 4, 4,
+      4
+    ],
+    "delta": [
+      0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 108, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 112, 0, 0, 0
+    ],
+    "flashFrames": [116],
+    "peakDelta": 112,
+    "worstDeltaFrame": 116
+  },
+  "audits": {
+    "flash": {
+      "name": "flash",
+      "passed": true,
+      "threshold": {
+        "generalFlashDelta": 0.1,
+        "maxFlashesPerSecond": 3,
+        "windowFrames": 24
+      },
+      "maxFlashesInWindow": 1,
+      "windowStartFrame": 116,
+      "flashCount": 1,
+      "firstFlashFrame": 116,
+      "worstAdjacentDelta": 0.112,
+      "worstAdjacentFrame": 116,
+      "reason": "1 flash reversals in the densest one-second window (limit 3)"
+    },
+    "continuity": {
+      "name": "continuity",
+      "passed": false,
+      "budget": 0.05,
+      "peakDelta": 0.112,
+      "peakFrame": 116,
+      "overBudgetBy": 0.062,
+      "reason": "frame 115->116 moves 0.112 of mean luminance, over the declared 0.050 budget"
+    },
+    "luminance": {
+      "name": "luminance",
+      "passed": true,
+      "maxAdjacentContrast": 1,
+      "minLuma": 0.004,
+      "maxLuma": 0.122,
+      "meanLuma": 0.060367,
+      "range": 0.118,
+      "peakAdjacentContrast": 0.112,
+      "reason": "luminance envelope 0.004..0.122 inside the 1.000 adjacent-contrast ceiling"
+    }
+  },
+  "verdict": "fail",
+  "failingAudits": ["continuity"],
+  "reasons": ["frame 115->116 moves 0.112 of mean luminance, over the declared 0.050 budget"],
+  "video": {
+    "file": "/clips/continuity-breach.mp4",
+    "bytes": 37635,
+    "sha256": "sha256:ca4f90e48c1670a7e85329ced61e2c3c638f84da8f28a99fbf791ba6b87aa57e",
+    "encoder": "libx264 crf 20 yuv420p"
+  },
+  "digestsReproducedAcrossPasses": true
+}

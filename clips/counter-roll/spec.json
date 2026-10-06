@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "id": "counter-roll",
+  "title": "Odometer counter",
+  "summary": "A frame count rolls from zero to the clip's own frame count, one cell at a time, with the value derived from the layer's progress rather than accumulated.",
+  "technique": ["count-up", "odometer", "progress-linked"],
+  "tags": ["counter", "roll", "numeric"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 6000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.18,
+  "maxAdjacentContrast": 0.6,
+  "reducedMotion": {
+    "holdFrame": 120,
+    "note": "The count has landed on its final value and the bar is full at frame 120."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 5400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "guides",
+      "name": "thirds",
+      "t": { "startMs": 150, "inMs": 600, "holdMs": 4200, "outMs": 700, "easing": "easeOutCubic" },
+      "mode": "grid",
+      "stroke": "line",
+      "strokeWidth": 1.5,
+      "reveal": "fade"
+    },
+    {
+      "kind": "text",
+      "name": "readout",
+      "t": { "startMs": 1833, "inMs": 3900, "holdMs": 1, "outMs": 0, "easing": "linear" },
+      "text": "000",
+      "counterFrom": 100,
+      "counterTo": 0,
+      "x": 640,
+      "y": 248,
+      "scale": 30,
+      "align": "center",
+      "tracking": 2.2,
+      "stroke": "accent",
+      "strokeWidth": 6,
+      "fade": false,
+      "reveal": "draw"
+    },
+    {
+      "kind": "text",
+      "name": "label",
+      "t": { "startMs": 1833, "inMs": 700, "holdMs": 3467, "outMs": 600, "easing": "easeOutQuad" },
+      "text": "FRAMES REMAINING",
+      "x": 640,
+      "y": 468,
+      "scale": 8,
+      "align": "center",
+      "tracking": 3.2,
+      "fill": "muted",
+      "strokeWidth": 3,
+      "reveal": "mask"
+    },
+    {
+      "kind": "rect",
+      "name": "progress",
+      "t": { "startMs": 1833, "inMs": 3900, "holdMs": 1, "outMs": 0, "easing": "linear" },
+      "x": 440,
+      "y": 548,
+      "w": 400,
+      "h": 6,
+      "radius": 3,
+      "fill": "accent",
+      "fade": false,
+      "reveal": "wipeX"
+    },
+    {
+      "kind": "circle",
+      "name": "dial",
+      "t": { "startMs": 1833, "inMs": 3900, "holdMs": 1, "outMs": 0, "easing": "linear" },
+      "cx": 640,
+      "cy": 634,
+      "r": 28,
+      "startDeg": -90,
+      "sweepDeg": 360,
+      "stroke": "accentDeep",
+      "strokeWidth": 3,
+      "fade": false,
+      "reveal": "sweep"
+    },
+    {
+      "kind": "text",
+      "name": "footer",
+      "t": { "startMs": 1200, "inMs": 600, "holdMs": 3600, "outMs": 600, "easing": "easeOutQuad" },
+      "text": "DETERMINISTIC, NOT ANIMATED",
+      "x": 640,
+      "y": 676,
+      "scale": 5,
+      "align": "center",
+      "tracking": 3,
+      "fill": "subtle",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "id": "stroke-sweep",
+  "title": "Path draw-on",
+  "summary": "A twelve-point path reveals by arc length rather than by a wipe mask, so the leading edge is always exactly where the progress says it is.",
+  "technique": ["draw-on", "arc-length", "polyline"],
+  "tags": ["line", "path", "data-viz"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 6000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.16,
+  "maxAdjacentContrast": 0.6,
+  "reducedMotion": {
+    "holdFrame": 140,
+    "note": "The path is fully drawn well before frame 140, so the hold frame shows the complete curve."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 5400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "guides",
+      "name": "thirds",
+      "t": { "startMs": 200, "inMs": 600, "holdMs": 4200, "outMs": 700, "easing": "easeOutCubic" },
+      "mode": "grid",
+      "stroke": "line",
+      "strokeWidth": 1.5,
+      "reveal": "fade"
+    },
+    {
+      "kind": "line",
+      "name": "axis",
+      "t": { "startMs": 300, "inMs": 500, "holdMs": 4500, "outMs": 700, "easing": "easeOutQuad" },
+      "x1": 180,
+      "y1": 360,
+      "x2": 1100,
+      "y2": 360,
+      "stroke": "line",
+      "strokeWidth": 2,
+      "reveal": "fade"
+    },
+    {
+      "kind": "polyline",
+      "name": "ghost",
+      "t": { "startMs": 500, "inMs": 900, "holdMs": 4000, "outMs": 700, "easing": "easeOutQuad" },
+      "points": [
+        [200, 470],
+        [280, 380],
+        [360, 430],
+        [440, 300],
+        [520, 360],
+        [600, 240],
+        [680, 330],
+        [760, 270],
+        [840, 350],
+        [920, 290],
+        [1000, 400],
+        [1080, 330]
+      ],
+      "stroke": "line",
+      "strokeWidth": 2,
+      "reveal": "fade"
+    },
+    {
+      "kind": "polyline",
+      "name": "path",
+      "t": { "startMs": 700, "inMs": 2600, "holdMs": 2100, "outMs": 700, "easing": "easeInOutCubic" },
+      "points": [
+        [200, 470],
+        [280, 380],
+        [360, 430],
+        [440, 300],
+        [520, 360],
+        [600, 240],
+        [680, 330],
+        [760, 270],
+        [840, 350],
+        [920, 290],
+        [1000, 400],
+        [1080, 330]
+      ],
+      "stroke": "accent",
+      "strokeWidth": 4,
+      "reveal": "draw"
+    },
+    {
+      "kind": "circle",
+      "name": "head",
+      "t": { "startMs": 700, "inMs": 2600, "holdMs": 2100, "outMs": 700, "easing": "easeInOutCubic" },
+      "cx": 200,
+      "cy": 470,
+      "r": 9,
+      "fill": "warm",
+      "reveal": "grow"
+    },
+    {
+      "kind": "text",
+      "name": "label",
+      "t": { "startMs": 900, "inMs": 700, "holdMs": 3700, "outMs": 700, "easing": "easeOutCubic" },
+      "text": "DRAW BY LENGTH",
+      "x": 640,
+      "y": 546,
+      "scale": 10,
+      "align": "center",
+      "tracking": 2.6,
+      "stroke": "paper",
+      "strokeWidth": 3,
+      "reveal": "draw"
+    },
+    {
+      "kind": "text",
+      "name": "caption",
+      "t": { "startMs": 1300, "inMs": 700, "holdMs": 3300, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "NOT BY MASK, NOT BY WIPE",
+      "x": 640,
+      "y": 634,
+      "scale": 5.5,
+      "align": "center",
+      "tracking": 3.2,
+      "fill": "subtle",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    }
+  ]
+}

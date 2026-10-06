@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "id": "ring-pulse",
+  "title": "Concentric pulse",
+  "summary": "Six rings breathe on offset windows. Overlapping pulses are where a motion budget either holds or quietly breaks.",
+  "technique": ["pulse", "rings", "overlap"],
+  "tags": ["rings", "breathing", "loop"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 6000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.15,
+  "maxAdjacentContrast": 0.55,
+  "reducedMotion": {
+    "holdFrame": 126,
+    "note": "The rings are mid-breath at frame 126; the reduced-motion hold shows the static mid-radius state."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 5400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "particles",
+      "name": "dust",
+      "t": { "startMs": 0, "inMs": 800, "holdMs": 4400, "outMs": 800, "easing": "easeOutQuad" },
+      "count": 140,
+      "seed": 61,
+      "cx": 640,
+      "cy": 360,
+      "spreadX": 1400,
+      "spreadY": 900,
+      "drift": 60,
+      "size": 2.4,
+      "fill": "subtle",
+      "reveal": "drift"
+    },
+    {
+      "kind": "circle",
+      "name": "ring-1",
+      "t": { "startMs": 0, "inMs": 2400, "holdMs": 2200, "outMs": 900, "easing": "easeInOutQuad" },
+      "cx": 640,
+      "cy": 360,
+      "r": 210,
+      "stroke": "accentDeep",
+      "strokeWidth": 2,
+      "reveal": "pulse"
+    },
+    {
+      "kind": "circle",
+      "name": "ring-2",
+      "t": { "startMs": 400, "inMs": 2400, "holdMs": 1800, "outMs": 900, "easing": "easeInOutQuad" },
+      "cx": 640,
+      "cy": 360,
+      "r": 210,
+      "stroke": "accentDeep",
+      "strokeWidth": 2,
+      "reveal": "pulse"
+    },
+    {
+      "kind": "circle",
+      "name": "ring-3",
+      "t": { "startMs": 800, "inMs": 2400, "holdMs": 1400, "outMs": 900, "easing": "easeInOutQuad" },
+      "cx": 640,
+      "cy": 360,
+      "r": 210,
+      "stroke": "accent",
+      "strokeWidth": 2,
+      "reveal": "pulse"
+    },
+    {
+      "kind": "circle",
+      "name": "ring-4",
+      "t": { "startMs": 1200, "inMs": 2400, "holdMs": 1000, "outMs": 900, "easing": "easeInOutQuad" },
+      "cx": 640,
+      "cy": 360,
+      "r": 210,
+      "stroke": "accent",
+      "strokeWidth": 2,
+      "reveal": "pulse"
+    },
+    {
+      "kind": "circle",
+      "name": "ring-5",
+      "t": { "startMs": 1600, "inMs": 2400, "holdMs": 600, "outMs": 900, "easing": "easeInOutQuad" },
+      "cx": 640,
+      "cy": 360,
+      "r": 210,
+      "stroke": "warm",
+      "strokeWidth": 2,
+      "reveal": "pulse"
+    },
+    {
+      "kind": "circle",
+      "name": "ring-6",
+      "t": { "startMs": 2000, "inMs": 2400, "holdMs": 200, "outMs": 900, "easing": "easeInOutQuad" },
+      "cx": 640,
+      "cy": 360,
+      "r": 210,
+      "stroke": "warm",
+      "strokeWidth": 2,
+      "reveal": "pulse"
+    },
+    {
+      "kind": "text",
+      "name": "label",
+      "t": { "startMs": 900, "inMs": 900, "holdMs": 3600, "outMs": 700, "easing": "easeOutCubic" },
+      "text": "PULSE",
+      "x": 640,
+      "y": 340,
+      "scale": 13,
+      "align": "center",
+      "tracking": 3,
+      "stroke": "paper",
+      "strokeWidth": 4,
+      "reveal": "draw"
+    },
+    {
+      "kind": "text",
+      "name": "caption",
+      "t": { "startMs": 1600, "inMs": 700, "holdMs": 2900, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "SIX OVERLAPPING BUDGETS",
+      "x": 640,
+      "y": 580,
+      "scale": 6,
+      "align": "center",
+      "tracking": 3.2,
+      "fill": "subtle",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    }
+  ]
+}

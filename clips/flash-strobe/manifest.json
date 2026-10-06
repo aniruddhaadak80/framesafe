@@ -1,0 +1,576 @@
+{
+  "schema": 1,
+  "id": "flash-strobe",
+  "title": "Strobe breach (intentional fail)",
+  "summary": "A deliberately unsafe clip: five high-contrast reversals a second. Its continuity and contrast budgets are switched off so the flash audit fails on its own, which is what proves the audit is not decorative.",
+  "technique": ["audit-demo", "strobe", "photosensitivity"],
+  "tags": ["intentional-fail", "flash", "accessibility"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 5000,
+  "frameCount": 120,
+  "specDigest": "sha256:0a8138546a592874be9ee83252e71b62f3651f8cfd00a740c5b37b0937c97b84",
+  "rootDigest": "sha256:8162a9b47beebb86eea8065b4622f9a8a298d139d624501d0ab872da2cd3b798",
+  "continuityBudget": 1,
+  "maxAdjacentContrast": 1,
+  "reducedMotion": {
+    "holdFrame": 0,
+    "note": "There is no safe hold for a strobe, which is exactly why the audit rejects this clip."
+  },
+  "renderer": {
+    "pillow": "12.3.0",
+    "numpy": "2.5.3",
+    "digestRecipe": "framesafe/frame-digest/1",
+    "analysisGrid": "64x36"
+  },
+  "frames": [
+    {
+      "i": 0,
+      "digest": "sha256:c6551465acc0900554cddabbe113cc8db933b1d6b197ba8a99f2fa688af12756"
+    },
+    {
+      "i": 1,
+      "digest": "sha256:5bebb0b3e0472d360a6eca9c19d8a7271cb8b52b9669eed9c16c34110e3d2be5"
+    },
+    {
+      "i": 2,
+      "digest": "sha256:d986184b893d733304a3f2beb7d7d2ed4f47ca5668771a33a4fecf87df6ab63a"
+    },
+    {
+      "i": 3,
+      "digest": "sha256:99c0c3602dcf8639079adf7ac3bf45eda47f2ba92d7f8928866c759b0dd4d5cd"
+    },
+    {
+      "i": 4,
+      "digest": "sha256:fd0f1e7408940940271f765fd4b7d4998625da04fa6abd90e2724ed7d6064ae2"
+    },
+    {
+      "i": 5,
+      "digest": "sha256:dc37c84f2c900e2d4185898e81d700cd3b6b8278ab72e00ff35a5290c9b0a2a6"
+    },
+    {
+      "i": 6,
+      "digest": "sha256:e07477372337a4f65824de030e7abb6c681bbeb3dac3e9493514698e191d7040"
+    },
+    {
+      "i": 7,
+      "digest": "sha256:719f3b60fd5572623841577d6c24f78f62727befedc99e78e5be5d4776c7c3dc"
+    },
+    {
+      "i": 8,
+      "digest": "sha256:e97467800631519203f3c8d74ac3805ab4ee930208bd1c45cbc9ade20de8ce6a"
+    },
+    {
+      "i": 9,
+      "digest": "sha256:9de9e9e4386a7fad23d5cd8f8e4d06fd3614ec67b165b525037918e6c27734e9"
+    },
+    {
+      "i": 10,
+      "digest": "sha256:dca69ac62c5f1012c7980d2028b18329ab6ccc257f66ceba1339a6abf8c1837a"
+    },
+    {
+      "i": 11,
+      "digest": "sha256:bdc1f4aecbda2bdcffb60fc28d23dc9a7cfd4654dba0ec8ecc48ece07f29fd1b"
+    },
+    {
+      "i": 12,
+      "digest": "sha256:bc1d6e8337c974f13440d6992be2e9b52c87a7ad33cc915a26df4f072625d68b"
+    },
+    {
+      "i": 13,
+      "digest": "sha256:364b016f150296d8c2441b5b8835998fbc5fc81430e3725436b3bfca505cab01"
+    },
+    {
+      "i": 14,
+      "digest": "sha256:b770254f7581ab80cdec23ea1b77bad26a51e5aac70a503051e0c98eac7be33b"
+    },
+    {
+      "i": 15,
+      "digest": "sha256:1389d79333c40c56f8418bd61f08d13450f25b9b3fe3a3d3b17879242cee0ce0"
+    },
+    {
+      "i": 16,
+      "digest": "sha256:a99a2e6c610b8fc7bce628ef327fd284bd08e0008cae5cd1b3be222a25f4b3bf"
+    },
+    {
+      "i": 17,
+      "digest": "sha256:8154595b967cb2a33c40054e97d329c753e8ed50e4d52ce735e417f7c28a7077"
+    },
+    {
+      "i": 18,
+      "digest": "sha256:508586e4fda1eb8c92e7fa18df3cbc7cefc9f329153361bd7fe3622dd95b7616"
+    },
+    {
+      "i": 19,
+      "digest": "sha256:533e93d928328689ec133780fbc92c6e054c84fa324c94cc00f110fc2a644729"
+    },
+    {
+      "i": 20,
+      "digest": "sha256:0627b0f94355d19c15bd77d04053ea03d85458617d01be3e78b8aab62b011b23"
+    },
+    {
+      "i": 21,
+      "digest": "sha256:fd7455e698732ea29ab558c7db489543213e28a0ab05c667c281bf3ef1ddb608"
+    },
+    {
+      "i": 22,
+      "digest": "sha256:b5877b3dba1efb22148e8b5cfb1c5a31f197b87394e8cec39cb2463ae1a83d2b"
+    },
+    {
+      "i": 23,
+      "digest": "sha256:c06941bf15fcd9241056e8c117e3916f8015912ee44cc340102cb864facb9e9e"
+    },
+    {
+      "i": 24,
+      "digest": "sha256:319c57e2d445765b3fac8b6a88e2b9b4ba92266e11675741b8dbaed7d7f241cf"
+    },
+    {
+      "i": 25,
+      "digest": "sha256:9cd1a3e69a220d55c8741da2e793350c4824aa0ea4d826c7cc5080f07b33bae5"
+    },
+    {
+      "i": 26,
+      "digest": "sha256:dc5ee7af6f6e5df58ad97984d691a95740bb5d3de1ba526e8625dc4070cfdcde"
+    },
+    {
+      "i": 27,
+      "digest": "sha256:880f5c65225f62bb49c21284b52237fe9e0a4283b4ffe204374f91100febddfb"
+    },
+    {
+      "i": 28,
+      "digest": "sha256:652a53c2ebc02c51d7e4acd0654da23191e8265e2ac39cc6b8ed7bb2fc788a6d"
+    },
+    {
+      "i": 29,
+      "digest": "sha256:06d848b91180c263f05c601a907cfe11004bfcfe57a81016f96134246ab3960d"
+    },
+    {
+      "i": 30,
+      "digest": "sha256:189fe9dc68aa9c59ab93ffe68b8cdda6449db7d3c860709dd53ad9e26c14b43c"
+    },
+    {
+      "i": 31,
+      "digest": "sha256:7d5f0d80d17908bdd91c314a824be41331001780f945a023b7c94c8c4e7bb1eb"
+    },
+    {
+      "i": 32,
+      "digest": "sha256:f618ca00f2805b7d1da6c88b0d3ba1d4f5a2de29f4ecc8cba73849078e305847"
+    },
+    {
+      "i": 33,
+      "digest": "sha256:e993ac395c3a5cdd25570b86f499c91a108e2dd7377adf02131cf1110ddb3d41"
+    },
+    {
+      "i": 34,
+      "digest": "sha256:4c23d43db082e8e014f7d28808a1e9870b2fecb0d7479738f50f86ad10757c70"
+    },
+    {
+      "i": 35,
+      "digest": "sha256:f649b429ba06adafd1297dd0801e804b539d2caccf47fd1f085a03849730be9b"
+    },
+    {
+      "i": 36,
+      "digest": "sha256:095db31f0740799a6f84bb5a24100a1e8789dae0064b2ed28792bbe52f46cf6f"
+    },
+    {
+      "i": 37,
+      "digest": "sha256:e63feed84e7904addb9535430ccfd06816ef29ecc1ae155d99638cb5cf86c14b"
+    },
+    {
+      "i": 38,
+      "digest": "sha256:dda39d94a1c58739402f4e5d2a32fd10d2f42499b075492d15fec40cf0929a41"
+    },
+    {
+      "i": 39,
+      "digest": "sha256:518ee20ed3f204fccdbc95bb2b91e426ba625bde1b27bdab656718e10ec9663d"
+    },
+    {
+      "i": 40,
+      "digest": "sha256:b076d5fe455885326563a220f0982a3f8ef5c61855cc9cdd8638df42907c8ada"
+    },
+    {
+      "i": 41,
+      "digest": "sha256:4c14cb140c1cb6f55171947cb190b2a27a991ae90645b1ef2f104f98b0005f31"
+    },
+    {
+      "i": 42,
+      "digest": "sha256:984fba4c18c6c590ddf046a90dd63259d6b71ce8995c50519052bdde75946529"
+    },
+    {
+      "i": 43,
+      "digest": "sha256:0cc1b7ce911754b4eed3209e5ed599ad50ed71ee82504c7c139ca011d20689b3"
+    },
+    {
+      "i": 44,
+      "digest": "sha256:7a094dbc85df5bc77f5445f513f4d9e2becc85f46df08b2f5e92a82c9996d82c"
+    },
+    {
+      "i": 45,
+      "digest": "sha256:ad3a41c83a303fa3e9f4fb07c696fa9e99ecf54326a9741decb09ce1ed5c2fe0"
+    },
+    {
+      "i": 46,
+      "digest": "sha256:f22fb150b84c0d8b2178ec07b7d0fc2a0dc5a9112afe64c87c03b27675535928"
+    },
+    {
+      "i": 47,
+      "digest": "sha256:678a750d8eef05f5e3f3a8c2783ac62b2efb9377eeaf2e822600bfe3ef48f893"
+    },
+    {
+      "i": 48,
+      "digest": "sha256:079ab5daf7836402d4ab9d57c82b466932793216e7e3c5b30881855396caf165"
+    },
+    {
+      "i": 49,
+      "digest": "sha256:cc95ee969e95662999e7a6e5e99ea131395df85e17ba505a884a7ae1fd176e9e"
+    },
+    {
+      "i": 50,
+      "digest": "sha256:3ca5902010bdf1618ce0cc408de110b0723ae3a29ffd602f0caaa2194e296d1f"
+    },
+    {
+      "i": 51,
+      "digest": "sha256:0952da7ec7d180e2efd48045ce93213a155e86d43817df4a9f36a77dfc1ddeab"
+    },
+    {
+      "i": 52,
+      "digest": "sha256:235d2cd96c5c94604bfbacafdf034bd2d62313f858ccee685a0900f1d0621808"
+    },
+    {
+      "i": 53,
+      "digest": "sha256:9cd6d16d72b1188752f26e3e52e76b7527297337ec1c5179ceed08de3455d5ba"
+    },
+    {
+      "i": 54,
+      "digest": "sha256:43a9b07119e24920a40bcf684a03f78147ea72fb90ac5c708d43e37c4db5d3dc"
+    },
+    {
+      "i": 55,
+      "digest": "sha256:a3ab9cb6ca81055cf2b21c66a7c9ffa0bac397dd92adfda2a11a6f33fc3ad85a"
+    },
+    {
+      "i": 56,
+      "digest": "sha256:7e332a5826b9d910f317e7ce81d7c1f72c9e97d201fb7a8134bb563eb7c9b596"
+    },
+    {
+      "i": 57,
+      "digest": "sha256:16db91e6a9ca63036b170b0cc082c5d7e9ed5ab53fb0cfa2a047466f8fc70535"
+    },
+    {
+      "i": 58,
+      "digest": "sha256:f20134896b3157a66a850ae3b894669beb3daabaebedea506c944bd616be509d"
+    },
+    {
+      "i": 59,
+      "digest": "sha256:299508573e5be8993ee0f5685e218dd13755438d82e6f6cc677d96ac1d32cf3c"
+    },
+    {
+      "i": 60,
+      "digest": "sha256:ce06c3c8446b794d06dda9550fce022217d295a19850e618920ad4571272fa79"
+    },
+    {
+      "i": 61,
+      "digest": "sha256:04a8e4722a196060e71b784e1f7e7ffa10140e15f658db979166842eb69dd225"
+    },
+    {
+      "i": 62,
+      "digest": "sha256:f1c0ac72eea5c1e19dee72320f2d6fc97a0ae0530c86e137f6b12b13c420af39"
+    },
+    {
+      "i": 63,
+      "digest": "sha256:7f86488f2adae162f3387599ac8d8f9ae47ab04e5aec51a5ea931d79cc7e943d"
+    },
+    {
+      "i": 64,
+      "digest": "sha256:42b79b4b0779ac89e866c675ddf2ab9fda045f8df429e34f438c2a947a3fbac7"
+    },
+    {
+      "i": 65,
+      "digest": "sha256:d46f5f88568cf725180f8eb22bd9105e5a9aaf5822b9c3ee31c0e81f7cbcbea3"
+    },
+    {
+      "i": 66,
+      "digest": "sha256:a9e3d641c7e63787394dd8196aa3863304be4c9f799dcc70ece714d0ac2ac9fd"
+    },
+    {
+      "i": 67,
+      "digest": "sha256:43cd6484f82cfa2e01f0eed064d3535de59e9f792786bbc62f6029ccd774b5d4"
+    },
+    {
+      "i": 68,
+      "digest": "sha256:fab97f11ab37686e4fa0ed75258120ca859c4e0d7fa0df91e01bae2c24755604"
+    },
+    {
+      "i": 69,
+      "digest": "sha256:43ee6de29d786df87dc46cd0d2e9d7aa5afb660b5eec22deef86bf91a98b4626"
+    },
+    {
+      "i": 70,
+      "digest": "sha256:85f3456b1c93c6efd935e2f5bf5302d8132155b3441a29f62807981b793e6353"
+    },
+    {
+      "i": 71,
+      "digest": "sha256:8c256de718593287b37c8cc50f4b5f9e93d032b8dfc1dbab9fff6cd608a222e6"
+    },
+    {
+      "i": 72,
+      "digest": "sha256:16ff603fcae88d8310b5131a664014061785671cb553c2fb398dae8a3d5535ed"
+    },
+    {
+      "i": 73,
+      "digest": "sha256:b792b78011b27ecdbb7117962f49d20f2abea58c807f812cb80bd61489ebe50b"
+    },
+    {
+      "i": 74,
+      "digest": "sha256:ef792435a41ff0d0da0d57682a1bc79176354af817572b7c394a15dadd5f1750"
+    },
+    {
+      "i": 75,
+      "digest": "sha256:55d43e0e5bd8aaa8145a4963f1caa9d8e26008aef0ea4a4f69c43f5304389061"
+    },
+    {
+      "i": 76,
+      "digest": "sha256:6af2ba78fb012569b98524b508b9fbd1de13cf8c7d32f9abffb779955471d2b0"
+    },
+    {
+      "i": 77,
+      "digest": "sha256:c05be639a0a8fbc0eb5ae53f6d974c8e29c4dd1ab002e7a5b1e59dac9c46a70c"
+    },
+    {
+      "i": 78,
+      "digest": "sha256:9adfcd485960c8734afa4ad4bf3ee8aa5d9ab6321854c0e61214187750509412"
+    },
+    {
+      "i": 79,
+      "digest": "sha256:38f2208614a407630161f883fc08044686ad5073a2e78acf3932c36311b4ca60"
+    },
+    {
+      "i": 80,
+      "digest": "sha256:590c08da846e32d7c46d63a3b2f5e5b9762a1a02da71cb009a6ed89a109a83e5"
+    },
+    {
+      "i": 81,
+      "digest": "sha256:f3964bf1665db6557c519fa4c870a57c073cbdc312f560af1e0062b20fb89d74"
+    },
+    {
+      "i": 82,
+      "digest": "sha256:02679b88127ce4ef1a00fa35b6e510e14e0afb49926424b0bb1172e6247b9c39"
+    },
+    {
+      "i": 83,
+      "digest": "sha256:b61ed0fc2bb40f9510296793cf23c2b8171c6472250ad42811237ba54eea00e8"
+    },
+    {
+      "i": 84,
+      "digest": "sha256:d3231eff7cb37987d8d136254f3068bf973260721ffabb846089c208fea32908"
+    },
+    {
+      "i": 85,
+      "digest": "sha256:8643f94d77d4ce296c504c98a769c9f493ab56e295acaa27c05273d02c26178e"
+    },
+    {
+      "i": 86,
+      "digest": "sha256:786918d0d3153e980500d50fbef25cbdd71f8da301fcf90e68f80136f195934c"
+    },
+    {
+      "i": 87,
+      "digest": "sha256:121d529a36a2f7bbd91e3123576488e5920b45f47fd83936b13b4231ee2e7e4e"
+    },
+    {
+      "i": 88,
+      "digest": "sha256:b02bf97652e031c7e380e4d840f0df061799d08b165fa45e76d12ca684cd0ddb"
+    },
+    {
+      "i": 89,
+      "digest": "sha256:81c2c6e4ddfe8d9a7e59f60ab1825d3c60bdca8491ec6b7cf83d4c797d8c420d"
+    },
+    {
+      "i": 90,
+      "digest": "sha256:f60d99c28edecb971fe83911892f322b97c6f0191a92be6b74ee51baa2073c42"
+    },
+    {
+      "i": 91,
+      "digest": "sha256:c621398305cde4a704e5363e49d58c4f40508cb2d7cc0ecc1f78ca467687d3f9"
+    },
+    {
+      "i": 92,
+      "digest": "sha256:df0e922b24b00a4085cfc654a8e910bf5c9adec0f329cefd8c7eb74c7226ffa0"
+    },
+    {
+      "i": 93,
+      "digest": "sha256:04d7fe636613e044751cbad2e08b357a15a75145cb583f5bbb1e8d610b125e80"
+    },
+    {
+      "i": 94,
+      "digest": "sha256:c05cffce25b77b7496ea6204d59b37bf6298430cd9b119fb961e8cf2ff63166c"
+    },
+    {
+      "i": 95,
+      "digest": "sha256:cc230cb00ae9dce96153c3fcb105ab7df1d1f8c5e6b3a1d92fa8d306ac838788"
+    },
+    {
+      "i": 96,
+      "digest": "sha256:ad0dd3dfc421d622c18eaa406106d1dfd26ce7455e8932c72bb54ed7bf4e1a9b"
+    },
+    {
+      "i": 97,
+      "digest": "sha256:9ba54fd3aac8356af681cbeaa2d65fb5753b15d05ad58fe7ecd243f50c7c8dd0"
+    },
+    {
+      "i": 98,
+      "digest": "sha256:606b8a0dfe9cddc6a5fa981f21f35a5d1640eef5a1319e5997626168c224facc"
+    },
+    {
+      "i": 99,
+      "digest": "sha256:99ca152ac00ed5215766f6bcfaec5ab8887b4fe977d8e0c1d61c2d55b3ed9ae6"
+    },
+    {
+      "i": 100,
+      "digest": "sha256:f62c3be18115b7ea96802d27b5e9f78dfca4b982c350edfcf87b7ff110db96ca"
+    },
+    {
+      "i": 101,
+      "digest": "sha256:6325cc0f41c408002e24af7260b6df62e62572679fc0d37c97e0e415640d2640"
+    },
+    {
+      "i": 102,
+      "digest": "sha256:577aa2ed46747923bdc32a7f45a23d9e2a26b2762c030255c8d57e32d44690e7"
+    },
+    {
+      "i": 103,
+      "digest": "sha256:512f5eb12fdd8092f7169e5c541a4d26a06e842fea52f6132d30b8bf08ae99b9"
+    },
+    {
+      "i": 104,
+      "digest": "sha256:d0ad91eac4dd3c1c41c09256d3f8ea51e70d42d7ee894828f4cc2bb98eac6543"
+    },
+    {
+      "i": 105,
+      "digest": "sha256:bbdf9e94f1c9e019ebc614582c9a672c8b164d861d241bd3ced6b3de81c8e74d"
+    },
+    {
+      "i": 106,
+      "digest": "sha256:8b9a14f4b8975b1fb96d4e573d59252db6241cfb37e82280ddb604f806603006"
+    },
+    {
+      "i": 107,
+      "digest": "sha256:a0e32870bf2c7a29b99a7c3c06e48aeac7621448a36c232b7a96ed1ef2003bdb"
+    },
+    {
+      "i": 108,
+      "digest": "sha256:ab01bd1dd37eacc76d725c20dbec636403a408df3405480dd5daffb321b0009d"
+    },
+    {
+      "i": 109,
+      "digest": "sha256:b2ac35fdccd149c61522b6b8b2c25f59e88192cf6867703d30e873569858b930"
+    },
+    {
+      "i": 110,
+      "digest": "sha256:143f6cd88752dcf01adf90bd7526a9dce303d21ac7575b393767ef30f7ddef72"
+    },
+    {
+      "i": 111,
+      "digest": "sha256:dd5f51a4da77e1bac897cdb99da3c638a51be5c171b987918a50dfba585b8cfd"
+    },
+    {
+      "i": 112,
+      "digest": "sha256:06581c51cda1336b56b1c411fca55cdb1134769a3acc101d6822526c75abf62f"
+    },
+    {
+      "i": 113,
+      "digest": "sha256:a05c009d3c3ced3ec47f9c26dde02c6ba3994453113e60add08ef643d71469a7"
+    },
+    {
+      "i": 114,
+      "digest": "sha256:43d3e71e61180f746692bb399929b76c4c4da0f677c97b9eb92c4d36474314ed"
+    },
+    {
+      "i": 115,
+      "digest": "sha256:912202d501fae22d2fe7acbfa6d2791962d1a9f6c38893a7696743d97684e1a7"
+    },
+    {
+      "i": 116,
+      "digest": "sha256:4fbee51f46c837c92ec9e640cd14935a60f7cef558f05d6ca6df4991894de142"
+    },
+    {
+      "i": 117,
+      "digest": "sha256:ab9b06eacc406ceb58946724cc7f75f223b030fe78a77490a8244509a934b762"
+    },
+    {
+      "i": 118,
+      "digest": "sha256:55e4554c08ad8cc2b777e225b3b4daa4d0275643c1f36c19163ea0a744df8cfe"
+    },
+    {
+      "i": 119,
+      "digest": "sha256:ab3a6d109c572ea47715f34567583cfdc740699a01c64f3383540497fb51efb2"
+    }
+  ],
+  "telemetry": {
+    "luma": [
+      4, 895, 895, 5, 5, 895, 895, 5, 5, 895, 895, 5, 5, 895, 895, 895, 5, 5, 895, 895, 5, 5, 895, 895, 5, 5,
+      895, 895, 895, 5, 5, 895, 895, 5, 5, 895, 895, 5, 5, 895, 895, 895, 5, 5, 895, 895, 5, 5, 895, 895, 5,
+      5, 895, 895, 5, 5, 5, 895, 895, 5, 5, 895, 895, 5, 5, 895, 895, 5, 5, 5, 895, 895, 5, 5, 895, 895, 5, 5,
+      895, 895, 5, 5, 5, 895, 895, 5, 5, 895, 895, 5, 5, 895, 895, 5, 5, 5, 895, 895, 5, 5, 895, 895, 5, 5,
+      895, 895, 5, 5, 895, 895, 895, 5, 5, 895, 895, 5, 5, 895, 895, 5
+    ],
+    "delta": [
+      0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0,
+      891, 0, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0,
+      891, 0, 891, 0, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0, 0, 891, 0, 891, 0, 891, 0, 891, 0,
+      891, 0, 891, 0, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891, 0, 0, 891, 0, 891, 0, 891, 0, 891, 0,
+      891, 0, 891, 0, 891, 0, 0, 891, 0, 891, 0, 891, 0, 891, 0, 891
+    ],
+    "flashFrames": [3, 9, 16, 22, 29, 35, 42, 48, 54, 61, 67, 74, 80, 87, 93, 100, 106, 113, 119],
+    "peakDelta": 891,
+    "worstDeltaFrame": 1
+  },
+  "audits": {
+    "flash": {
+      "name": "flash",
+      "passed": false,
+      "threshold": {
+        "generalFlashDelta": 0.1,
+        "maxFlashesPerSecond": 3,
+        "windowFrames": 24
+      },
+      "maxFlashesInWindow": 4,
+      "windowStartFrame": 3,
+      "flashCount": 19,
+      "firstFlashFrame": 3,
+      "worstAdjacentDelta": 0.891,
+      "worstAdjacentFrame": 1,
+      "reason": "4 flash reversals inside frames 3-27 (limit 3)"
+    },
+    "continuity": {
+      "name": "continuity",
+      "passed": true,
+      "budget": 1,
+      "peakDelta": 0.891,
+      "peakFrame": 1,
+      "overBudgetBy": 0,
+      "reason": "peak inter-frame motion 0.891 within the 1.000 budget"
+    },
+    "luminance": {
+      "name": "luminance",
+      "passed": true,
+      "maxAdjacentContrast": 1,
+      "minLuma": 0.004,
+      "maxLuma": 0.895,
+      "meanLuma": 0.449992,
+      "range": 0.891,
+      "peakAdjacentContrast": 0.891,
+      "reason": "luminance envelope 0.004..0.895 inside the 1.000 adjacent-contrast ceiling"
+    }
+  },
+  "verdict": "fail",
+  "failingAudits": ["flash"],
+  "reasons": ["4 flash reversals inside frames 3-27 (limit 3)"],
+  "video": {
+    "file": "/clips/flash-strobe.mp4",
+    "bytes": 924092,
+    "sha256": "sha256:2b6f48cbf83f42cb24dcc18546e7d341651b08a8c9d6c2d67bf4b28d23bb724c",
+    "encoder": "libx264 crf 20 yuv420p"
+  },
+  "digestsReproducedAcrossPasses": true
+}

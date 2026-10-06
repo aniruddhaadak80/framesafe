@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "id": "morph-blob",
+  "title": "Shape morph",
+  "summary": "A hexagon morphs into a five-point star. Both paths are resampled to a common vertex count, so the interpolation is a pure function of progress.",
+  "technique": ["morph", "interpolation", "resample"],
+  "tags": ["shape", "morph", "geometry"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 6000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.16,
+  "maxAdjacentContrast": 0.6,
+  "reducedMotion": {
+    "holdFrame": 130,
+    "note": "The star is fully formed at frame 130, so the reduced-motion hold is the end state."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 5400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "guides",
+      "name": "thirds",
+      "t": { "startMs": 200, "inMs": 600, "holdMs": 4200, "outMs": 700, "easing": "easeOutCubic" },
+      "mode": "grid",
+      "stroke": "line",
+      "strokeWidth": 1.5,
+      "reveal": "fade"
+    },
+    {
+      "kind": "rings",
+      "name": "halo",
+      "t": { "startMs": 300, "inMs": 1800, "holdMs": 3300, "outMs": 700, "easing": "easeOutQuart" },
+      "cx": 640,
+      "cy": 340,
+      "count": 2,
+      "fromR": 120,
+      "toR": 280,
+      "sweepDeg": 360,
+      "spin": 60,
+      "stroke": "accentDeep",
+      "strokeWidth": 2,
+      "reveal": "expand"
+    },
+    {
+      "kind": "polygon",
+      "name": "morph",
+      "t": { "startMs": 500, "inMs": 2400, "holdMs": 2500, "outMs": 700, "easing": "easeInOutCubic" },
+      "cx": 640,
+      "cy": 340,
+      "r": 150,
+      "points": [
+        [640, 190],
+        [770, 265],
+        [770, 415],
+        [640, 490],
+        [510, 415],
+        [510, 265]
+      ],
+      "to": [
+        [640, 180],
+        [680, 285],
+        [792, 291],
+        [705, 361],
+        [734, 469],
+        [640, 408],
+        [546, 469],
+        [575, 361],
+        [488, 291],
+        [600, 285]
+      ],
+      "stroke": "accent",
+      "strokeWidth": 5,
+      "reveal": "morph"
+    },
+    {
+      "kind": "circle",
+      "name": "core",
+      "t": { "startMs": 2400, "inMs": 700, "holdMs": 2300, "outMs": 700, "easing": "easeOutBack" },
+      "cx": 640,
+      "cy": 340,
+      "r": 42,
+      "fill": "warm",
+      "reveal": "grow"
+    },
+    {
+      "kind": "text",
+      "name": "label",
+      "t": { "startMs": 1000, "inMs": 700, "holdMs": 3600, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "HEX TO STAR",
+      "x": 640,
+      "y": 566,
+      "scale": 9,
+      "align": "center",
+      "tracking": 3,
+      "stroke": "paper",
+      "strokeWidth": 3,
+      "reveal": "draw"
+    },
+    {
+      "kind": "text",
+      "name": "caption",
+      "t": { "startMs": 1500, "inMs": 700, "holdMs": 3100, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "TEN VERTICES, ONE RULE",
+      "x": 640,
+      "y": 648,
+      "scale": 6,
+      "align": "center",
+      "tracking": 3.2,
+      "fill": "subtle",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    }
+  ]
+}

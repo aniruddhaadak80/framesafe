@@ -1,0 +1,11 @@
+{
+  "name": "flash-strict",
+  "version": "0.1.0",
+  "description": "Tightens the flash audit to a two-per-second ceiling for previews, which is stricter than the three-per-second shipping rule.",
+  "enabled": true,
+  "priority": 70,
+  "capabilities": ["audit.flash-strict"],
+  "engines": {
+    "@framesafe": "0.1.0"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "id": "waveform-bars",
+  "title": "Envelope bars",
+  "summary": "A pseudo-audio envelope drives forty-four bars. There is no audio file: the waveform is a sum of three sines whose phases come from the layer's seed.",
+  "technique": ["waveform", "envelope", "seeded-entropy"],
+  "tags": ["audio-like", "bars", "loop"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 5000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.22,
+  "maxAdjacentContrast": 0.55,
+  "reducedMotion": {
+    "holdFrame": 90,
+    "note": "Frame 90 sits mid-envelope; a reduced-motion viewer sees a static set of bars at a representative height."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 4400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "bars",
+      "name": "reflection",
+      "t": { "startMs": 200, "inMs": 700, "holdMs": 3400, "outMs": 700, "easing": "linear" },
+      "count": 44,
+      "seed": 5,
+      "x": 180,
+      "baseline": 578,
+      "barWidth": 14,
+      "gap": 8,
+      "height": 180,
+      "fill": "line",
+      "reveal": "rise"
+    },
+    {
+      "kind": "bars",
+      "name": "wave",
+      "t": { "startMs": 200, "inMs": 700, "holdMs": 3400, "outMs": 700, "easing": "linear" },
+      "count": 44,
+      "seed": 5,
+      "x": 180,
+      "baseline": 520,
+      "barWidth": 14,
+      "gap": 8,
+      "height": 300,
+      "fill": "accent",
+      "reveal": "rise"
+    },
+    {
+      "kind": "line",
+      "name": "baseline",
+      "t": { "startMs": 300, "inMs": 500, "holdMs": 3500, "outMs": 700, "easing": "easeOutQuad" },
+      "x1": 160,
+      "y1": 520,
+      "x2": 1120,
+      "y2": 520,
+      "stroke": "subtle",
+      "strokeWidth": 2,
+      "reveal": "fade"
+    },
+    {
+      "kind": "text",
+      "name": "label",
+      "t": { "startMs": 900, "inMs": 700, "holdMs": 2700, "outMs": 700, "easing": "easeOutCubic" },
+      "text": "ENVELOPE, NOT AUDIO",
+      "x": 640,
+      "y": 214,
+      "scale": 7,
+      "align": "center",
+      "tracking": 2.8,
+      "stroke": "paper",
+      "strokeWidth": 3,
+      "reveal": "draw"
+    },
+    {
+      "kind": "text",
+      "name": "caption",
+      "t": { "startMs": 1400, "inMs": 700, "holdMs": 2200, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "THREE SINES, ONE SEED",
+      "x": 640,
+      "y": 622,
+      "scale": 6,
+      "align": "center",
+      "tracking": 3.2,
+      "fill": "subtle",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    }
+  ]
+}

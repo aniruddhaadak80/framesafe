@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "description": "Scored audit cases. Each one is a real spec with the verdict and failing audits it must produce. Two of them are negative controls: a case that must pass because the audit should NOT fire.",
+  "cases": [
+    {
+      "id": "calm-fade",
+      "note": "A gentle fade must pass all three audits.",
+      "expect": { "verdict": "pass", "failingAudits": [] },
+      "spec": {
+        "id": "calm-fade",
+        "title": "Calm fade",
+        "technique": ["fade"],
+        "fps": 10,
+        "width": 96,
+        "height": 54,
+        "durationMs": 500,
+        "continuityBudget": 0.2,
+        "maxAdjacentContrast": 0.6,
+        "layers": [
+          {
+            "kind": "background",
+            "t": { "startMs": 0, "inMs": 300, "holdMs": 100, "outMs": 100, "easing": "easeInOutQuad" },
+            "fill": "panel",
+            "reveal": "fade"
+          },
+          {
+            "kind": "circle",
+            "t": { "startMs": 50, "inMs": 250, "holdMs": 100, "outMs": 100, "easing": "easeOutCubic" },
+            "cx": 48,
+            "cy": 27,
+            "r": 14,
+            "stroke": "accent",
+            "strokeWidth": 2,
+            "reveal": "grow"
+          }
+        ]
+      }
+    },
+    {
+      "id": "flash-breach",
+      "note": "A strobe at roughly ten reversals a second must fail flash. Two earlier versions of this case passed for instructive reasons: a period commensurate with the frame rate aliases into a steady state, and exactly three reversals per second is at the WCAG limit rather than over it.",
+      "expect": { "verdict": "fail", "failingAudits": ["flash"] },
+      "spec": {
+        "id": "flash-breach",
+        "title": "Flash breach",
+        "technique": ["strobe"],
+        "fps": 24,
+        "width": 96,
+        "height": 54,
+        "durationMs": 1000,
+        "continuityBudget": 1,
+        "maxAdjacentContrast": 1,
+        "layers": [
+          {
+            "kind": "strobe",
+            "t": { "startMs": 0, "inMs": 1000, "holdMs": 1, "outMs": 0, "easing": "linear" },
+            "periodMs": 100,
+            "dutyCycle": 0.5,
+            "fill": "paper",
+            "stroke": "ink",
+            "fade": false,
+            "reveal": "flash"
+          }
+        ]
+      }
+    },
+    {
+      "id": "teleport-breach",
+      "note": "A one-frame appearance must breach continuity while staying under the flash limit: one reversal is not a flash.",
+      "expect": { "verdict": "fail", "failingAudits": ["continuity"] },
+      "spec": {
+        "id": "teleport-breach",
+        "title": "Teleport",
+        "technique": ["hard-cut"],
+        "fps": 10,
+        "width": 96,
+        "height": 54,
+        "durationMs": 500,
+        "continuityBudget": 0.04,
+        "maxAdjacentContrast": 1,
+        "layers": [
+          {
+            "kind": "background",
+            "t": { "startMs": 0, "inMs": 100, "holdMs": 400, "outMs": 0, "easing": "linear" },
+            "fill": "panel",
+            "reveal": "fade"
+          },
+          {
+            "kind": "rect",
+            "t": { "startMs": 200, "inMs": 1, "holdMs": 300, "outMs": 0, "easing": "linear" },
+            "x": 10,
+            "y": 10,
+            "w": 70,
+            "h": 34,
+            "fill": "warm",
+            "fade": false,
+            "reveal": "fade"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contrast-breach",
+      "note": "A full-frame brightness jump must breach the luminance ceiling.",
+      "expect": { "verdict": "fail", "failingAudits": ["luminance"] },
+      "spec": {
+        "id": "contrast-breach",
+        "title": "Contrast breach",
+        "technique": ["invert"],
+        "fps": 10,
+        "width": 96,
+        "height": 54,
+        "durationMs": 500,
+        "continuityBudget": 1,
+        "maxAdjacentContrast": 0.2,
+        "layers": [
+          {
+            "kind": "background",
+            "t": { "startMs": 200, "inMs": 1, "holdMs": 300, "outMs": 0, "easing": "linear" },
+            "fill": "paper",
+            "fade": false,
+            "reveal": "fade"
+          }
+        ]
+      }
+    },
+    {
+      "id": "monotonic-pulse",
+      "note": "Negative control: a smooth one-directional pulse changes luminance every frame and must still pass flash. The flash audit counts polarity reversals, not deltas, so an audit that merely counted big changes would fail this.",
+      "expect": { "verdict": "pass", "failingAudits": [] },
+      "spec": {
+        "id": "monotonic-pulse",
+        "title": "Monotonic pulse",
+        "technique": ["pulse"],
+        "fps": 10,
+        "width": 96,
+        "height": 54,
+        "durationMs": 500,
+        "continuityBudget": 0.5,
+        "maxAdjacentContrast": 1,
+        "layers": [
+          {
+            "kind": "circle",
+            "t": { "startMs": 0, "inMs": 400, "holdMs": 100, "outMs": 0, "easing": "linear" },
+            "cx": 48,
+            "cy": 27,
+            "r": 22,
+            "fill": "muted",
+            "reveal": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reduced-motion-hold",
+      "note": "A quantised hold must pass: a still cannot flash, and its continuity delta is zero.",
+      "expect": { "verdict": "pass", "failingAudits": [] },
+      "spec": {
+        "id": "reduced-motion-hold",
+        "title": "Reduced motion hold",
+        "technique": ["steps"],
+        "fps": 10,
+        "width": 96,
+        "height": 54,
+        "durationMs": 500,
+        "continuityBudget": 0.2,
+        "maxAdjacentContrast": 0.6,
+        "layers": [
+          {
+            "kind": "background",
+            "t": { "startMs": 0, "inMs": 100, "holdMs": 300, "outMs": 100, "easing": "steps(1)" },
+            "fill": "panel",
+            "reveal": "fade"
+          },
+          {
+            "kind": "text",
+            "t": { "startMs": 0, "inMs": 100, "holdMs": 300, "outMs": 100, "easing": "steps(1)" },
+            "text": "STILL",
+            "x": 8,
+            "y": 20,
+            "scale": 2,
+            "fill": "accent",
+            "strokeWidth": 1,
+            "reveal": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "double-breach",
+      "note": "A strobe combined with a hard cut must report both failing audits, not just the first.",
+      "expect": { "verdict": "fail", "failingAudits": ["continuity", "flash"] },
+      "spec": {
+        "id": "double-breach",
+        "title": "Double breach",
+        "technique": ["strobe", "hard-cut"],
+        "fps": 24,
+        "width": 96,
+        "height": 54,
+        "durationMs": 1000,
+        "continuityBudget": 0.05,
+        "maxAdjacentContrast": 1,
+        "layers": [
+          {
+            "kind": "strobe",
+            "t": { "startMs": 0, "inMs": 1000, "holdMs": 1, "outMs": 0, "easing": "linear" },
+            "periodMs": 100,
+            "dutyCycle": 0.5,
+            "fill": "paper",
+            "stroke": "ink",
+            "fade": false,
+            "reveal": "flash"
+          },
+          {
+            "kind": "rect",
+            "t": { "startMs": 400, "inMs": 1, "holdMs": 600, "outMs": 0, "easing": "linear" },
+            "x": 6,
+            "y": 6,
+            "w": 84,
+            "h": 42,
+            "fill": "alert",
+            "fade": false,
+            "reveal": "fade"
+          }
+        ]
+      }
+    }
+  ]
+}

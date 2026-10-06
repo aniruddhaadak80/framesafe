@@ -1,0 +1,15 @@
+# Text is normalised to LF in the repository and checked out as LF everywhere.
+#
+# This matters more than usual here: a manifest's specDigest is computed over the
+# *canonical* form of a spec, and a checkout that rewrites line endings would leave the
+# committed bytes and the parsed values quietly disagreeing on a contributor's machine.
+* text=auto eol=lf
+
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary

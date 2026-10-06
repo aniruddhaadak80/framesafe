@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "id": "logo-assemble",
+  "title": "Logo assembly",
+  "summary": "A geometric mark assembles from primitives on an overshooting curve, so the parts land with a punch instead of a stop.",
+  "technique": ["assembly", "overshoot", "stagger"],
+  "tags": ["logo", "spring", "primitives"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 6000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.2,
+  "maxAdjacentContrast": 0.7,
+  "reducedMotion": {
+    "holdFrame": 108,
+    "note": "The assembled mark is complete from frame 108 onwards, so the hold frame is the finished logo."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 5400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "guides",
+      "name": "thirds",
+      "t": { "startMs": 150, "inMs": 600, "holdMs": 4200, "outMs": 700, "easing": "easeOutCubic" },
+      "mode": "grid",
+      "stroke": "line",
+      "strokeWidth": 1.5,
+      "reveal": "fade"
+    },
+    {
+      "kind": "rings",
+      "name": "orbit",
+      "t": { "startMs": 200, "inMs": 1700, "holdMs": 3500, "outMs": 700, "easing": "easeOutQuart" },
+      "cx": 640,
+      "cy": 320,
+      "count": 3,
+      "fromR": 40,
+      "toR": 205,
+      "sweepDeg": 300,
+      "spin": 140,
+      "stroke": "accentDeep",
+      "strokeWidth": 2,
+      "reveal": "expand"
+    },
+    {
+      "kind": "polygon",
+      "name": "hex",
+      "t": { "startMs": 350, "inMs": 900, "holdMs": 4150, "outMs": 700, "easing": "easeOutBack" },
+      "cx": 640,
+      "cy": 320,
+      "r": 98,
+      "sides": 6,
+      "stroke": "warm",
+      "strokeWidth": 5,
+      "reveal": "grow"
+    },
+    {
+      "kind": "polygon",
+      "name": "core",
+      "t": { "startMs": 1150, "inMs": 520, "holdMs": 3730, "outMs": 700, "easing": "easeOutBack" },
+      "cx": 640,
+      "cy": 320,
+      "r": 36,
+      "sides": 4,
+      "fill": "accent",
+      "reveal": "grow"
+    },
+    {
+      "kind": "rect",
+      "name": "bar-left",
+      "t": { "startMs": 1400, "inMs": 520, "holdMs": 3480, "outMs": 700, "easing": "easeOutBack" },
+      "x": 452,
+      "y": 302,
+      "w": 24,
+      "h": 56,
+      "fill": "accent",
+      "reveal": "scale"
+    },
+    {
+      "kind": "rect",
+      "name": "bar-mid",
+      "t": { "startMs": 1620, "inMs": 520, "holdMs": 3260, "outMs": 700, "easing": "easeOutBack" },
+      "x": 628,
+      "y": 302,
+      "w": 24,
+      "h": 56,
+      "fill": "accent",
+      "reveal": "scale"
+    },
+    {
+      "kind": "rect",
+      "name": "bar-right",
+      "t": { "startMs": 1840, "inMs": 520, "holdMs": 3040, "outMs": 700, "easing": "easeOutBack" },
+      "x": 804,
+      "y": 302,
+      "w": 24,
+      "h": 56,
+      "fill": "accent",
+      "reveal": "scale"
+    },
+    {
+      "kind": "text",
+      "name": "caption",
+      "t": { "startMs": 2250, "inMs": 700, "holdMs": 2450, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "ASSEMBLED",
+      "x": 640,
+      "y": 566,
+      "scale": 9,
+      "align": "center",
+      "tracking": 2.8,
+      "fill": "muted",
+      "strokeWidth": 3,
+      "reveal": "mask"
+    },
+    {
+      "kind": "text",
+      "name": "sub",
+      "t": { "startMs": 2650, "inMs": 700, "holdMs": 2050, "outMs": 700, "easing": "easeOutQuad" },
+      "text": "SPEC IN, PIXELS OUT",
+      "x": 640,
+      "y": 650,
+      "scale": 6,
+      "align": "center",
+      "tracking": 3.4,
+      "fill": "subtle",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "id": "orbit-grid",
+  "title": "Grid sweep",
+  "summary": "A cell grid lights in diagonal order and sweeps back out, while rings expand behind it. The whole clip is one function of the frame index.",
+  "technique": ["grid", "diagonal-sweep", "rings"],
+  "tags": ["grid", "loop", "sweep"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 6000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.2,
+  "maxAdjacentContrast": 0.65,
+  "reducedMotion": {
+    "holdFrame": 130,
+    "note": "At frame 130 the sweep has returned to its resting state, which is the static design."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 5400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "grid",
+      "name": "field",
+      "t": { "startMs": 200, "inMs": 5200, "holdMs": 200, "outMs": 700, "easing": "linear" },
+      "x": 220,
+      "y": 150,
+      "cols": 10,
+      "rows": 6,
+      "cell": 84,
+      "gap": 12,
+      "fill": "line",
+      "reveal": "pulse"
+    },
+    {
+      "kind": "grid",
+      "name": "field-hot",
+      "t": { "startMs": 200, "inMs": 5200, "holdMs": 200, "outMs": 700, "easing": "linear" },
+      "x": 220,
+      "y": 150,
+      "cols": 10,
+      "rows": 6,
+      "cell": 84,
+      "gap": 12,
+      "fill": "accentDeep",
+      "stroke": "accent",
+      "strokeWidth": 2,
+      "reveal": "sweep"
+    },
+    {
+      "kind": "rings",
+      "name": "pulse",
+      "t": { "startMs": 300, "inMs": 3000, "holdMs": 2000, "outMs": 800, "easing": "easeOutQuart" },
+      "cx": 640,
+      "cy": 402,
+      "count": 4,
+      "fromR": 60,
+      "toR": 420,
+      "sweepDeg": 360,
+      "spin": 45,
+      "stroke": "line",
+      "strokeWidth": 2,
+      "reveal": "expand"
+    },
+    {
+      "kind": "text",
+      "name": "label",
+      "t": { "startMs": 3000, "inMs": 800, "holdMs": 1600, "outMs": 700, "easing": "easeOutCubic" },
+      "text": "ONE INDEX, ONE FRAME",
+      "x": 640,
+      "y": 596,
+      "scale": 7,
+      "align": "center",
+      "tracking": 2.8,
+      "stroke": "paper",
+      "strokeWidth": 3,
+      "reveal": "draw"
+    }
+  ]
+}

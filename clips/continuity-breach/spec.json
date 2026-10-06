@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "id": "continuity-breach",
+  "title": "Continuity breach (intentional fail)",
+  "summary": "A hard cut between two layouts, published with a declared continuity budget the clip does not meet. Its flash budget is wide open so only the continuity audit fails.",
+  "technique": ["audit-demo", "hard-cut", "continuity"],
+  "tags": ["intentional-fail", "continuity", "transition"],
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "durationMs": 5000,
+  "supersample": 2,
+  "background": "ink",
+  "continuityBudget": 0.05,
+  "maxAdjacentContrast": 1,
+  "reducedMotion": {
+    "holdFrame": 30,
+    "note": "Frame 30 is the last frame before the cut, so the reduced-motion hold shows the state a viewer never gets to see the second half of."
+  },
+  "layers": [
+    {
+      "kind": "background",
+      "name": "ink",
+      "t": { "startMs": 0, "inMs": 300, "holdMs": 4400, "outMs": 300, "easing": "easeOutQuad" },
+      "fill": "panel",
+      "reveal": "fade"
+    },
+    {
+      "kind": "circle",
+      "name": "before-dot",
+      "t": { "startMs": 300, "inMs": 600, "holdMs": 1800, "outMs": 400, "easing": "easeOutBack" },
+      "cx": 640,
+      "cy": 330,
+      "r": 58,
+      "fill": "accent",
+      "reveal": "grow"
+    },
+    {
+      "kind": "text",
+      "name": "before-label",
+      "t": { "startMs": 700, "inMs": 500, "holdMs": 1900, "outMs": 300, "easing": "easeOutQuad" },
+      "text": "HOLDING",
+      "x": 640,
+      "y": 434,
+      "scale": 9,
+      "align": "center",
+      "tracking": 3,
+      "stroke": "paper",
+      "strokeWidth": 3,
+      "reveal": "draw"
+    },
+    {
+      "kind": "rect",
+      "name": "cut-panel",
+      "t": { "startMs": 2600, "inMs": 1, "holdMs": 1800, "outMs": 400, "easing": "linear" },
+      "x": 240,
+      "y": 200,
+      "w": 800,
+      "h": 320,
+      "fill": "warm",
+      "fade": false,
+      "reveal": "fade"
+    },
+    {
+      "kind": "text",
+      "name": "after-label",
+      "t": { "startMs": 2650, "inMs": 500, "holdMs": 1750, "outMs": 300, "easing": "easeOutQuad" },
+      "text": "CUT",
+      "x": 640,
+      "y": 322,
+      "scale": 16,
+      "align": "center",
+      "tracking": 3,
+      "fill": "ink",
+      "strokeWidth": 5,
+      "reveal": "draw"
+    },
+    {
+      "kind": "text",
+      "name": "foot",
+      "t": { "startMs": 2900, "inMs": 600, "holdMs": 1500, "outMs": 400, "easing": "easeOutQuad" },
+      "text": "BUDGET 0.05, ACTUAL 0.28",
+      "x": 640,
+      "y": 592,
+      "scale": 5,
+      "align": "center",
+      "tracking": 2.8,
+      "fill": "alert",
+      "strokeWidth": 2,
+      "reveal": "mask"
+    }
+  ]
+}
