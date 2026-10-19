@@ -123,19 +123,25 @@ for (const block of shellBlocks(markdown)) {
 
     // `node <path>` and `python <path>` invocations are the dominant shape in this README,
     // because the CLI and the engine are run from their built entry points. The path must
-    // exist, and when the script declares a subcommand the README must not be the only
-    // place that subcommand appears. This is the check that stops a walkthrough from
-    // documenting a script that was renamed or deleted.
+    // exist — but build artifacts under /dist/ are gitignored, so a fresh clone can never
+    // hold them. For those, rot detection checks the *source* package that produces the
+    // artifact: while the workspace package is still there the README documents a real
+    // command; when that package is removed or renamed, this is precisely the drift this
+    // gate exists to catch. Every other absent path stays a failure.
     const script = /^(node|python3?)\s+([A-Za-z0-9_./\\-]+\.(?:mjs|cjs|js|ts|py))\b/.exec(line)
     if (script) {
       commandsChecked += 1
       const target = join(ROOT, script[2])
-      if (!existsSync(target)) {
-        problems.push({
-          line,
-          why: `${script[2]} does not exist in the repository`,
-        })
-      }
+      if (existsSync(target)) continue
+
+      const artifact = /(^|[\\/])dist[\\/]/.exec(script[2])
+      const sourcePkg = artifact !== null ? script[2].slice(0, artifact.index) : null
+      if (sourcePkg !== null && existsSync(join(ROOT, sourcePkg, 'package.json'))) continue
+
+      problems.push({
+        line,
+        why: `${script[2]} does not exist in the repository`,
+      })
       continue
     }
 
