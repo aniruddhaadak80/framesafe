@@ -8,6 +8,7 @@ the manifest diff says which clip moved.
 from __future__ import annotations
 
 import json
+from importlib.metadata import version
 from pathlib import Path
 
 import pytest
@@ -22,6 +23,7 @@ from golden import GOLDEN_DIGESTS, GOLDEN_RENDERER, GOLDEN_SPEC
 
 ROOT = Path(__file__).resolve().parents[3]
 CLIPS = ROOT / "clips"
+
 
 def test_render_produces_the_declared_size() -> None:
     plan = compile_spec(GOLDEN_SPEC)
@@ -131,7 +133,9 @@ def test_verify_operation_detects_a_tampered_manifest() -> None:
 
 def test_verify_operation_detects_a_truncated_manifest() -> None:
     manifest = analyse("manifest", {"spec": GOLDEN_SPEC})
-    result = analyse("verify", {"spec": GOLDEN_SPEC, "manifest": {**manifest, "frames": manifest["frames"][:2]}})
+    result = analyse(
+        "verify", {"spec": GOLDEN_SPEC, "manifest": {**manifest, "frames": manifest["frames"][:2]}}
+    )
     assert result["reproducible"] is False
     assert result["firstDifference"]["frameIndex"] == 2
 
@@ -195,6 +199,7 @@ def test_shipped_negative_tests_fail_and_shipped_clips_pass() -> None:
         if verdict == "fail":
             assert "intentional-fail" in tags, f"{clip_id} fails but is not marked intentional"
 
+
 def test_golden_frame_digests_are_stable() -> None:
     """Anti-drift: if this fails, a pixel changed and every manifest must be re-derived."""
     plan = compile_spec(GOLDEN_SPEC)
@@ -206,6 +211,12 @@ def test_golden_frame_digests_are_stable() -> None:
 
 
 def test_golden_render_records_the_renderer_that_produced_it() -> None:
+    """The manifest must fingerprint the *installed* renderer, and record the same
+    fingerprint fields the golden was written with. The pixels themselves are guarded by
+    the digest comparisons above; pinning versions here would break on every Pillow or
+    numpy release inside the declared supported ranges (pip picks a different numpy per
+    interpreter in the CI matrix), which is drift noise, not a renderer change."""
     manifest = analyse("manifest", {"spec": GOLDEN_SPEC})
-    assert manifest["renderer"]["pillow"] == GOLDEN_RENDERER["pillow"]
-    assert manifest["renderer"]["numpy"] == GOLDEN_RENDERER["numpy"]
+    assert set(GOLDEN_RENDERER) <= set(manifest["renderer"])
+    assert manifest["renderer"]["pillow"] == version("pillow")
+    assert manifest["renderer"]["numpy"] == version("numpy")
