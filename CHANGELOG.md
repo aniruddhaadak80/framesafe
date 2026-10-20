@@ -9,6 +9,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- The Python test job caches pip downloads, so the engine's test dependencies are not
+  re-downloaded on every run.
 - The clip library: 15 rendered motion-graphics clips, each authored as a declarative spec and
   committed with a manifest carrying a SHA-256 per frame.
 - The Python engine: spec validation and normalisation, 14 easing curves, a stroke font defined
