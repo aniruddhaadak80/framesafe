@@ -9,6 +9,9 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- Every third-party GitHub Action is now pinned to a commit SHA with its version in a trailing
+  comment, which is the standard `docs/ci.md` already described but the workflows did not
+  follow. A mutable tag means anyone who compromises the tag owns the CI.
 - The clip library: 15 rendered motion-graphics clips, each authored as a declarative spec and
   committed with a manifest carrying a SHA-256 per frame.
 - The Python engine: spec validation and normalisation, 14 easing curves, a stroke font defined
