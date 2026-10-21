@@ -33,7 +33,7 @@ export function parseSkill(source: string, origin = '<inline>'): ParsedSkill {
   try {
     parsed = parseYaml(raw)
   } catch (cause) {
-    throw new Error(`${origin}: frontmatter is not valid YAML — ${String(cause)}`)
+    throw new Error(`${origin}: frontmatter is not valid YAML — ${String(cause)}`, { cause })
   }
   if (parsed === null || typeof parsed !== 'object') {
     throw new Error(`${origin}: frontmatter must be a mapping`)

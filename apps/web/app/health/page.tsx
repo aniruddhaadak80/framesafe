@@ -14,7 +14,7 @@ const TONE = { ok: 'ok', warn: 'warn', fail: 'danger' } as const
 export default async function HealthPage() {
   const base = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'
 
-  let checks: Check[] = []
+  let checks: Check[]
   let reachable = false
   try {
     const response = await fetch(`${base}/api/health`, { cache: 'no-store' })
