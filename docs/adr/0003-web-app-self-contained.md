@@ -19,7 +19,8 @@ between the deployment target and the local build order.
 **Good**
 
 - The Vercel build cannot break because a workspace build reordered or failed.
-- `vercel --prod` works from a bare checkout of `apps/web`.
+- The gallery deploys as one Vercel service rooted at `apps/web`; the service map is the root
+  `vercel.json`, so the deploy runs from the repository root.
 - The deployed bundle is inspectable and has a small, known dependency set.
 
 **Bad**
