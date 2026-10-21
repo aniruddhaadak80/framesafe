@@ -4,7 +4,7 @@
     "web": {
       "root": "apps/web",
       "framework": "nextjs",
-      "installCommand": "npm ci",
+      "installCommand": "npm ci --include=dev",
       "buildCommand": "npm run build --workspace @framesafe/web"
     }
   },

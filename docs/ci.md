@@ -55,8 +55,15 @@ Error: [MISSING_SERVICES] Project framework is set to "services", but no service
 ```
 
 No GitHub Actions job sees that failure, because it happens on Vercel's side and comes back as a
-commit status. The one service is `web`, rooted at `apps/web`, built with `npm ci` and
-`npm run build --workspace @framesafe/web`.
+commit status. The one service is `web`, rooted at `apps/web`, built with `npm ci --include=dev`
+and `npm run build --workspace @framesafe/web`.
+
+`--include=dev` is not optional. Vercel builds with `NODE_ENV=production`, and npm then omits
+`devDependencies` - which is how the install used to die with `sh: line 1: prettier: command not
+found`, because the root `prepare` script runs `prettier --write .` and `prettier` is a dev
+dependency. The same flag keeps `typescript` and the `@types/*` packages in place, which
+`next build` needs, because `apps/web/next.config.mjs` sets `typescript.ignoreBuildErrors` to
+false.
 
 There is exactly one Vercel configuration file, and it is the root one. The service owns the
 build fields (`framework`, `installCommand`, `buildCommand`), because a top-level build field has
