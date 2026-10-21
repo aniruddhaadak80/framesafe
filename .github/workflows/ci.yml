@@ -72,6 +72,7 @@ jobs:
       - run: npm run check:boundaries
       - run: npm run check:public-hygiene
       - run: npm run check:readme-commands
+      - run: npm run check:vercel-services
       # The clip gates need Python: they compile every spec and re-derive every manifest
       # digest with the engine itself.
       - run: python -m pip install --upgrade pip
