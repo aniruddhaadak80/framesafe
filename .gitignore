@@ -33,3 +33,5 @@ Thumbs.db
 # Frames and contact sheets written by the developer preview helpers.
 .preview*.png
 .contact-sheet.png
+# The local Vercel project link. It is machine-specific and must never be committed.
+.vercel/
