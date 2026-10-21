@@ -30,6 +30,10 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Fixed
 
+- Every Vercel deployment failed with `MISSING_SERVICES`. The project builds in services mode,
+  so the service map lives in the root `vercel.json`, and that file was never committed: no
+  branch, production or preview, could build. The map is versioned now, and the new
+  `check:vercel-services` gate fails the build if it goes missing again.
 - `ClipPlan.out_progress` returned the eased exit curve instead of the remaining share, so every
   layer vanished on the first frame of its exit. Found by the continuity audit on a real clip;
   see `docs/notes/the-audit-caught-the-engine.md`.
