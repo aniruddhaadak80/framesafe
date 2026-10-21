@@ -1,10 +1,10 @@
-{
+﻿{
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
     "web": {
       "root": "apps/web",
       "framework": "nextjs",
-      "installCommand": "npm ci --include=dev",
+      "installCommand": "npm ci --include=dev --ignore-scripts && ls -d node_modules/prettier node_modules/typescript node_modules/.bin/prettier node_modules/.bin/next 2>&1; ls node_modules/.bin | head -25",
       "buildCommand": "npm run build --workspace @framesafe/web"
     }
   },
