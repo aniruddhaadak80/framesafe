@@ -9,7 +9,7 @@ Branch protection keys on exact job names, so these are stable:
 | `Format`            | `ci.yml`       | Prettier agrees with the tree                  |
 | `Lint`              | `ci.yml`       | ESLint, including the React hooks rules        |
 | `Typecheck`         | `ci.yml`       | `tsc --noEmit` across every workspace          |
-| `Policy gates`      | `ci.yml`       | the seven policy gates below                   |
+| `Policy gates`      | `ci.yml`       | the nine policy gates below                    |
 | `Test`              | `ci.yml`       | Vitest on Node 22 and 24                       |
 | `Python test`       | `ci.yml`       | pytest on 3.11 and 3.12, plus mypy and ruff    |
 | `Build`             | `ci.yml`       | every package builds, and the web app builds   |
@@ -33,12 +33,37 @@ Cheap and mechanical first, so a bad hex literal fails in 200 ms rather than aft
 | `check:boundaries`      | a package imports another package's deep path                                      |
 | `check:public-hygiene`  | stray logs, editor dirs, caches, or a >1 MB non-asset file                         |
 | `check:readme-commands` | a README command is not a real script, bin, or script path                         |
+| `check:vercel-services` | the root `vercel.json` does not declare a service Vercel can build                 |
 | `check:clip-specs`      | a spec does not compile, or a text layer leaves the safe inset or overlaps another |
 | `check:manifests`       | a manifest disagrees with its spec, its frames, its audits, or its video           |
 
 `check:readme-commands` was extended during this build: it now resolves `node <path>` and
 `python <path>` invocations and fails if the file does not exist. That is the dominant command
 shape in this repository's README, and the gate had been silently skipping all of them.
+
+## The Vercel deployment
+
+The gallery is the only part of this repository deployed to Vercel, and the Vercel project builds
+in **services mode**: the service map lives in the root `vercel.json`, not in the project
+settings. That file is committed, and `check:vercel-services` fails the build when it goes
+missing.
+
+Without it every deployment - production and preview alike - dies before a build starts:
+
+```text
+Error: [MISSING_SERVICES] Project framework is set to "services", but no services are declared.
+```
+
+No GitHub Actions job sees that failure, because it happens on Vercel's side and comes back as a
+commit status. The one service is `web`, rooted at `apps/web`, built with `npm ci` and
+`npm run build --workspace @framesafe/web`.
+
+There is exactly one Vercel configuration file, and it is the root one. The service owns the
+build fields (`framework`, `installCommand`, `buildCommand`), because a top-level build field has
+no single owner once a project has more than one service. The root `vercel.json` also carries the
+public routing: one catch-all rewrite sends every request to the `web` service, because a service
+is internal until a top-level rewrite routes to it, and the security headers that used to live in
+`apps/web/vercel.json`.
 
 ## Local gate
 
