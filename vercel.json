@@ -4,7 +4,7 @@
     "web": {
       "root": "apps/web",
       "framework": "nextjs",
-      "installCommand": "npm ci --include=dev --ignore-scripts && ls -d node_modules/prettier node_modules/typescript node_modules/.bin/prettier node_modules/.bin/next 2>&1; ls node_modules/.bin | head -25",
+      "installCommand": "npm ci --include=dev --ignore-scripts",
       "buildCommand": "npm run build --workspace @framesafe/web"
     }
   },

@@ -55,15 +55,27 @@ Error: [MISSING_SERVICES] Project framework is set to "services", but no service
 ```
 
 No GitHub Actions job sees that failure, because it happens on Vercel's side and comes back as a
-commit status. The one service is `web`, rooted at `apps/web`, built with `npm ci --include=dev`
-and `npm run build --workspace @framesafe/web`.
+commit status. The one service is `web`, rooted at `apps/web`, built with
+`npm ci --include=dev --ignore-scripts` and `npm run build --workspace @framesafe/web`.
 
-`--include=dev` is not optional. Vercel builds with `NODE_ENV=production`, and npm then omits
-`devDependencies` - which is how the install used to die with `sh: line 1: prettier: command not
-found`, because the root `prepare` script runs `prettier --write .` and `prettier` is a dev
-dependency. The same flag keeps `typescript` and the `@types/*` packages in place, which
-`next build` needs, because `apps/web/next.config.mjs` sets `typescript.ignoreBuildErrors` to
-false.
+Both flags on the install command are load-bearing.
+
+`--include=dev` keeps `typescript` and the `@types/*` packages in the tree. `next build` type
+checks, because `apps/web/next.config.mjs` sets `typescript.ignoreBuildErrors` to false.
+
+`--ignore-scripts` is what makes the install finish. Vercel builds one service at a time and
+installs that service's dependency tree, so the root package's own `devDependencies` - `prettier`
+among them - are not on disk. The root `prepare` script still runs, and it runs
+`prettier --write .`, so the install died with:
+
+```text
+sh: line 1: prettier: command not found
+npm error code 127
+```
+
+Skipping install scripts drops the `prepare` hook. That is the right trade for a deploy: a
+formatter is a development convenience, and running it against the build input only costs build
+time and rewrites the tree that is about to be built.
 
 There is exactly one Vercel configuration file, and it is the root one. The service owns the
 build fields (`framework`, `installCommand`, `buildCommand`), because a top-level build field has
