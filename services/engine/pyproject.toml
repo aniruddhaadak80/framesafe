@@ -13,7 +13,7 @@ authors = [{ name = "aniruddhaadak80" }]
 # Upper bounds on purpose: a rasteriser upgrade can legitimately change a frame digest,
 # and that must arrive as a reviewed manifest diff rather than as a silent CI drift.
 dependencies = [
-  "pillow>=10.3,<13",
+  "pillow>=10.3,<14",
   "numpy>=1.26,<3",
 ]
 
