@@ -11,6 +11,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - The Python test job caches pip downloads, so the engine's test dependencies are not
   re-downloaded on every run.
+- Tests for the migration list: the numbering has no gaps, the order is the version order,
+  every migration is idempotent, and a database that is ahead of the code is never downgraded.
 - Tests for the plugin manifest: the defaults a manifest gets, and every way loading one can
   fail - a missing file, invalid JSON, and each field the schema refuses.
 - The clip library: 15 rendered motion-graphics clips, each authored as a declarative spec and
