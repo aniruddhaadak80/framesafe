@@ -2,7 +2,7 @@
   "name": "framesafe",
   "version": "0.1.0",
   "private": true,
-  "description": "framesafe — Compile a motion-graphics spec into frame-exact renders with a per-frame digest manifest, then prove each clip reproducible, motion-safe and inside its declared continuity budget.",
+  "description": "framesafe â€” Compile a motion-graphics spec into frame-exact renders with a per-frame digest manifest, then prove each clip reproducible, motion-safe and inside its declared continuity budget.",
   "license": "MIT",
   "author": "aniruddhaadak80",
   "repository": {
@@ -68,7 +68,7 @@
     "@eslint/js": "^10.0.1",
     "@types/node": "^22.10.0",
     "eslint": "^10.13.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "husky": "^9.1.7",
     "prettier": "^3.9.10",
     "turbo": "^2.11.9",
