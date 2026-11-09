@@ -18,6 +18,10 @@ updates:
         update-types:
           - minor
           - patch
+    ignore:
+      # The 22.x line is what both tsconfig and the Node 22 CI matrix target.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: pip
     directory: /services/engine
     schedule:
